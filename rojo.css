@@ -146,6 +146,10 @@ footer a:hover {
 /*Retoque para que los card-title tengan la misma altura y por lo tanto los card-text empiecen a la misma altura*/
 .custom-card-title {
     min-height: 3em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Establece el número máximo de líneas a mostrar */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 /*Retoque para que en los card-text aparezca como mucho tres lineas y lo demás se oculte y los ver mas estén a la misma altura todos*/
 .card-text {
