@@ -1,0 +1,159 @@
+/*El header tiene una altura automática y su color de letra*/
+.navega {
+    height: auto;
+    color: #001f3f;
+}
+/*Tamaño del logo responsivo*/
+.foto-logo {
+    width: 15vh;
+}
+/*Estilo de los dropdown-menu del header*/
+.dropdown-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid #001f3f;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    font-weight: bolder;
+}
+/*Estilo de los elementos del dropdown-menu*/
+.dropdown-menu a {
+    color: #001f3f;
+    padding: 9px 15px;
+    text-decoration: none;
+    display: block;
+}
+/*Estilo de los elementos del dropdown-menu cuando se pasa por encima*/
+.dropdown-menu a:hover {
+    background-color: #001f3f;
+    color: white;
+}
+/*Estilo del simbolo del login*/
+.fa-user {
+    color: #001f3f;
+}
+.fa-user:hover {
+    color: #0074d9;
+}
+/*Arreglo del simbolo del login para que esté centrado siempre*/
+.navbar-nav .nav-item:last-child {
+    display: flex;
+    align-items: center;
+}
+/*Estilo del footer*/
+footer {
+    background-color: #001f3f;
+    color: white !important;
+}
+
+footer a {
+    text-decoration: none;
+    display: block;
+}
+
+footer a:hover {
+    color: #0074d9 !important;
+}
+/*Retoque del menú*/
+.nav-link {
+    color: inherit !important;
+}
+/*Efecto para los elementos del menú para cuando se pase por encima*/
+.efecto-menu {
+    position: relative;
+}
+
+.efecto-menu::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #0074d9;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.efecto-menu:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+/*Estilo del boton del collapse*/
+.custom-toggler-icon {
+    width: 5vh;
+    height: 4vh;
+    display: inline-block;
+    color: #001f3f;
+    text-align: center;
+    line-height: 30px;
+    font-size: 4vh
+}
+
+.navbar-collapse {
+    text-align: center;
+}
+/*Estilo del contenido despues del menu*/
+.fondo {
+    height: auto;
+    background-color: #001f3f;
+    color: white;
+}
+/*Estilo de los card*/
+.card {
+    background-color: #001f3f;
+    color: white;
+}
+.color-titulo {
+    color: #001f3f;
+}
+/*Estilo de los botones de ver mas*/
+.btn-vermas {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0074d9;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid white;
+}
+/*Estilo de los botones de ver mas al pasar por encima*/
+.btn-vermas:hover {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #001f3f;
+    color: #0074d9;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid #0074d9;
+}
+/*Retoque para que las fotos de los card tengan la misma altura y un borde*/
+.custom-image {
+    height: 15vh;
+    object-fit: cover;
+    width: 100%;
+    border-bottom: 1px solid #001f3f;
+}
+/*Retoque para que los card-title tengan la misma altura y por lo tanto los card-text empiecen a la misma altura*/
+.custom-card-title {
+    min-height: 3em;
+}
+/*Retoque para que en los card-text aparezca como mucho tres lineas y lo demás se oculte y los ver mas estén a la misma altura todos*/
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Establece el número máximo de líneas a mostrar */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 5em;
+}
+/*El color que esté activo aparece marcado para ayudar visualmente a que no den al mismo en el que están*/
+.dropdown-item.active {
+    background-color: #001f3f;
+    color: white;
+}
