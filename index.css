@@ -198,7 +198,14 @@ footer a:hover {
 
 /*Texto de instalaciones*/
 .texto-instalaciones {
-    font-size: 2vh;
+    font-size: 1.2rem;
+    color: #6f9387;
+}
+
+.titulo-instalaciones {
+    font-size: 2.5rem;
+    color: #043408;
+    margin-bottom: 10px;
 }
 
 hr {
