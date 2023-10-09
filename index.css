@@ -200,7 +200,6 @@ footer a:hover {
 .texto-instalaciones {
     font-size: 1.2rem;
     color: #6f9387;
-    margin-bottom: 10px;
 }
 
 .titulo-instalaciones {
@@ -227,6 +226,7 @@ hr {
     font-size: 1.2rem;
     color: #6f9387;
 }
+
 /* Estilo para la imagen de la directora */
 .directora-imagen {
     border: 2px solid #043408;
@@ -237,16 +237,13 @@ hr {
     padding-left: 5% !important;
 }
 
-/* Añade una clase para la última columna para eliminar el borde derecho */
-.ultima-columna {
-    border-right: none;
-}
-
 /* Estilo para ocultar la línea divisoria en tamaños md o menores */
 @media (max-width: 768px) {
     .columna {
-        border-right: none !important; /* Importante para anular el estilo anterior */
-        padding-left: 0 !important; /* Importante para anular el estilo anterior */
+        border-right: none !important;
+        /* Importante para anular el estilo anterior */
+        padding-left: 0 !important;
+        /* Importante para anular el estilo anterior */
         padding-bottom: 10px;
     }
 }
