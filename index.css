@@ -241,9 +241,97 @@ hr {
 @media (max-width: 768px) {
     .columna {
         border-right: none !important;
-        /* Importante para anular el estilo anterior */
         padding-left: 0 !important;
-        /* Importante para anular el estilo anterior */
         padding-bottom: 10px;
     }
+
+    .titulo-modal {
+        margin-top: 2% !important;
+        margin-bottom: 3% !important;
+    }
+}
+
+/*Estilo de las ventanas modales que salen al pulsar el ver más */
+dialog {
+    width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    border: 3px solid #043408;
+    color: #043408;
+    overflow-y: auto;
+}
+
+.custom-image-modal {
+    border-radius: 10px;
+    border: 1px solid #6f9387;
+}
+
+.custom-image-modal:hover {
+    filter: saturate(180%);
+}
+
+/*Estilo tablas resultados y clasificaciones*/
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.custom-select select {
+    background-color: #043408;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    appearance: none;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #043408;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.titulo3 {
+    font-size: 1.2em !important;
+}
+
+th,
+td {
+    border: 1px solid white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #079907;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #057505;
+}
+
+.tabla-vacio {
+    border-left: none;
+    border-right: none;
+}
+
+.nombre-contacto {
+    font-size: 2.5rem;
+    color: #043408;
+}
+
+.texto-contacto {
+    font-size: 1.5rem;
+    color: #6f9387;
+}
+
+.texto-horario {
+    font-size: 1.2rem;
+    color: white;
 }

@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         crossorigin="anonymous">
@@ -126,21 +123,61 @@
     </div>
     <hr>
 
-    <!--Instalaciones-->
-    <div class="text-center">
-        <div class="container">
-            <h1 class="pt-5 titulo-instalaciones">Instalaciones</h1>
-            <div class="texto-instalaciones py-5">
-                <p class="px-5 text-start mb-5">
-                    El centro educativo cuenta con un total de X aulas, X laboratorios, una sala de música y diversas
-                    instalaciones deportivas.
-                    En estas instalaciones, el cuerpo docente ofrece sus asignaturas con un amplio conjunto de recursos
-                    y el equipamiento más avanzado disponible,
-                    garantizando así un entorno óptimo para la enseñanza
-                </p>
-                <img src="images/instituto.jpeg" class="img-fluid img-instalaciones">
+    <!--Noticias-->
+    <div class="container text-center py-5">
+        <div class="row pb-3">
+            <!--4 cards en una linea, por debajo de lg de 2 en 2-->
+            <div class="col-lg-3 col-6 py-3">
+                <div class="card h-100">
+                    <img class="card-img-top custom-image" src="images/libros.jpg">
+                    <div class="card-body">
+                        <h5 class="card-title custom-card-title">Adjudicadas becas libros curso 2023 / 2024</h5>
+                        <p class="card-text">Adjudicadas ya las becas definitivas para los libros de texto de todos los
+                            cursos de la ESO para el próximo curso</p>
+                        <button class="btn-vermas" onclick="window.modal1.showModal();">Ver Más</a>
+                    </div>
+                </div>
             </div>
+            <div class="col-lg-3 col-6 py-3">
+                <div class="card h-100">
+                  <img class="card-img-top custom-image" src="images/instituto.jpeg">
+                  <div class="card-body">
+                    <h5 class="card-title custom-card-title">Matrícula curso 2023 / 2024</h5>
+                    <p class="card-text">Abierto el periodo de matriculación para los alumnos de la ESO</p>
+                    <button class="btn-vermas" onclick="window.modal2.showModal();">Ver Más</a>
+                  </div>
+                </div>
+              </div>
         </div>
+
+        <dialog id="modal1">
+            <div class="row">
+                <div class="col-md-4"><img src="images/libros.jpg" class="img-fluid custom-image-modal"></div>
+                <div class="col-md-8 text-center">
+                    <h1 class="mb-5 titulo-modal">Adjudicadas becas libros curso 2023 / 2024</h1>
+                    <p>Adjudicadas ya las becas definitivas para los libros de texto de todos los cursos de la ESO para el próximo curso</p>
+                    <a href="images/pdf_ejemplo.pdf" download>
+                        <i class="fa-solid fa-file-pdf fa-2xl" style="color: #7a0000;"></i>
+                        <p class="pt-1">pdf_ejemplo.pdf</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 text-center mt-4"><button class="btn-vermas" onclick="window.modal1.close();">Cerrar</button></div>
+        </dialog>
+        <dialog id="modal2">
+            <div class="row">
+                <div class="col-md-4"><img src="images/instituto.jpeg" class="img-fluid custom-image-modal"></div>
+                <div class="col-md-8 text-center">
+                    <h1 class="mb-5 titulo-modal">Matrícula curso 2023 / 2024</h1>
+                    <p>Abierto el periodo de matriculación para los alumnos de la ESO</p>
+                    <a href="images/pdf_ejemplo.pdf" download>
+                        <i class="fa-solid fa-file-pdf fa-2xl" style="color: #7a0000;"></i>
+                        <p class="pt-1">pdf_ejemplo.pdf</p>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 text-center mt-4"><button class="btn-vermas" onclick="window.modal2.close();">Cerrar</button></div>
+        </dialog>    
     </div>
 
     <!--Footer-->
@@ -182,3 +219,5 @@
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
 </body>
+
+</html>

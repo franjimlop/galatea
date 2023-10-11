@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        crossorigin="anonymous">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <title>IES La Galatea</title>
+</head>
+
+<body>
+    <!--Menú-->
+    <div class="navega">
+        <div class="container">
+            <!--Se colapsa cuando sea xl-->
+            <nav class="navbar navbar-expand-xl navbar-light align-content-center">
+                <div class="container-fluid">
+                    <!--Logo-->
+                    <a class="navbar-brand" href="index.html"><img src="images/LA_GALATEA_sin_fondo.png"
+                            class="foto-logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <!--Que aparece cuando se colapsa-->
+                        <span class="custom-toggler-icon">☰</span>
+                    </button>
+                    <!--Lo que hay dentro de aquí se colapsa-->
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <!--Elemento Nuestro Centro-->
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Nuestro Centro
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="instalaciones.html">Instalaciones</a></li>
+                                    <li><a class="dropdown-item" href="saludo.html">Saludo de la directora</a></li>
+                                    <li><a class="dropdown-item" href="equipo.html">Equipo Directivo</a></li>
+                                </ul>
+                            </li>
+                            <!--Elemento Novedades-->
+                            <li class="nav-item px-2">
+                                <a class="nav-link efecto-menu" href="novedades.html">Novedades</a>
+                            </li>
+                            <!--Elemento Departamentos-->
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Departamentos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">Lengua Castellana y Literatura</a></li>
+                                    <li><a class="dropdown-item" href="#">Matemáticas</a></li>
+                                    <li><a class="dropdown-item" href="#">Física y Química</a></li>
+                                </ul>
+                            </li>
+                            <!--Elemento Actividades-->
+                            <li class="nav-item px-2">
+                                <a class="nav-link efecto-menu" href="actividades.html">Actividades</a>
+                            </li>
+                            <!--Elemento Proyectos-->
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Proyectos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item" href="#">Mejor clase</a></li>
+                                </ul>
+                            </li>
+                            <!--Elemento Competiciones-->
+                            <li class="nav-item px-2">
+                                <a class="nav-link efecto-menu" href="competiciones.html">Competiciones</a>
+                            </li>
+                            <!--Elemento Contacto-->
+                            <li class="nav-item px-2">
+                                <a class="nav-link efecto-menu" href="contacto.html">Contacto</a>
+                            </li>
+                            <!--Elemento Color-->
+                            <li class="nav-item dropdown px-2">
+                                <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Color
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                    <li><a class="dropdown-item active" href="index.html">Verde oliva</a></li>
+                                    <li><a class="dropdown-item" href="azulmarino.html">Azul marino</a></li>
+                                    <li><a class="dropdown-item" href="verde.html">Verde esmeralda</a></li>
+                                    <li><a class="dropdown-item" href="morado.html">Morado</a></li>
+                                    <li><a class="dropdown-item" href="rojoyoro.html">Rojo y oro</a></li>
+                                    <li><a class="dropdown-item" href="naranja.html">Naranja</a></li>
+                                    <li><a class="dropdown-item" href="pastel.html">Pastel</a></li>
+                                    <li><a class="dropdown-item" href="amarillo.html">Amarillo</a></li>
+                                    <li><a class="dropdown-item" href="azul.html">Azul</a></li>
+                                    <li><a class="dropdown-item" href="celeste.html">Celeste</a></li>
+                                    <li><a class="dropdown-item" href="turquesa.html">Turquesa</a></li>
+                                    <li><a class="dropdown-item" href="verdeyrosa.html">Verde y rosa</a></li>
+                                    <li><a class="dropdown-item" href="rojoynegro.html">Rojo y Negro</a></li>
+                                    <li><a class="dropdown-item" href="marron.html">Marrón</a></li>
+                                    <li><a class="dropdown-item" href="rosaypurpura.html">Rosa y púrpura</a></li>
+                                    <li><a class="dropdown-item" href="negro.html">Blanco y negro</a></li>
+                                    <li><a class="dropdown-item" href="rojo.html">Rojo</a></li>
+                                </ul>
+                            </li>
+                            <!--Elemento Login-->
+                            <div class="row justify-content-center align-content-center">
+                                <div class="col-auto">
+                                    <li class="nav-item px-2"><a href=""><i class="fa-solid fa-user"></i></a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <hr>
+
+    <!--Competiciones-->
+    <div class="container text-center my-5">
+        <div class="row">
+            <div class="col-lg-6 mb-3">
+                <div class="form-group">
+                    <div class="custom-select">
+                        <select id="deporteSelect" onchange="mostrarTabla()">
+                            <option value="futbol">Futbol</option>
+                            <option value="baloncesto">Baloncesto</option>
+                            <option value="ajedrez">Ajedrez</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="form-group">
+                    <div class="custom-select">
+                        <select id="tablaSelect" onchange="mostrarTabla()">
+                            <option value="resultado">Resultados</option>
+                            <option value="clasificacion">Clasificación</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-3 text-center" id="resultadosFutbol">
+        <table class="mb-5">
+            <h3 class="mb-5">Jornada 1</h3>
+            <thead>
+                <tr class="titulo-tabla">
+                    <th>Equipo</th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th>Equipo</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1ºA</td>
+                    <td class="tabla-vacio">2</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">1</td>
+                    <td>1ºB</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>1ºC</td>
+                    <td class="tabla-vacio">1</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">1</td>
+                    <td>1ºD</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>2ºA</td>
+                    <td class="tabla-vacio">0</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">1</td>
+                    <td>2ºB</td>
+                    <td>12/10/23</td>
+                </tr>
+                <tr>
+                    <td>2ºC</td>
+                    <td class="tabla-vacio">4</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">2</td>
+                    <td>2ºD</td>
+                    <td>12/10/23</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="mb-5">
+            <h3 class="mb-5">Jornada 2</h3>
+            <thead>
+                <tr class="titulo-tabla">
+                    <th>Equipo</th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th>Equipo</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1ºA</td>
+                    <td class="tabla-vacio">2</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">1</td>
+                    <td>1ºB</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>1ºC</td>
+                    <td class="tabla-vacio">1</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">1</td>
+                    <td>1ºD</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>2ºA</td>
+                    <td class="tabla-vacio">0</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">1</td>
+                    <td>2ºB</td>
+                    <td>12/10/23</td>
+                </tr>
+                <tr>
+                    <td>2ºC</td>
+                    <td class="tabla-vacio">4</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">2</td>
+                    <td>2ºD</td>
+                    <td>12/10/23</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container my-3 text-center" id="resultadosBaloncesto">
+        <table class="mb-5">
+            <h3 class="mb-5">Jornada 1</h3>
+            <thead>
+                <tr class="titulo-tabla">
+                    <th>Equipo</th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th>Equipo</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1ºA</td>
+                    <td class="tabla-vacio">24</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">12</td>
+                    <td>1ºB</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>1ºC</td>
+                    <td class="tabla-vacio">15</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">17</td>
+                    <td>1ºD</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>2ºA</td>
+                    <td class="tabla-vacio">09</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">19</td>
+                    <td>2ºB</td>
+                    <td>12/10/23</td>
+                </tr>
+                <tr>
+                    <td>2ºC</td>
+                    <td class="tabla-vacio">43</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">27</td>
+                    <td>2ºD</td>
+                    <td>12/10/23</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="mb-5">
+            <h3 class="mb-5">Jornada 1</h3>
+            <thead>
+                <tr class="titulo-tabla">
+                    <th>Equipo</th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th>Equipo</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1ºA</td>
+                    <td class="tabla-vacio">24</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">12</td>
+                    <td>1ºB</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>1ºC</td>
+                    <td class="tabla-vacio">15</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">17</td>
+                    <td>1ºD</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>2ºA</td>
+                    <td class="tabla-vacio">09</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">19</td>
+                    <td>2ºB</td>
+                    <td>12/10/23</td>
+                </tr>
+                <tr>
+                    <td>2ºC</td>
+                    <td class="tabla-vacio">43</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">27</td>
+                    <td>2ºD</td>
+                    <td>12/10/23</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container my-3 text-center" id="resultadosAjedrez">
+        <table class="mb-5">
+            <h3 class="mb-5">Jornada 1</h3>
+            <thead>
+                <tr class="titulo-tabla">
+                    <th>Jugador</th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th>Jugador</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jugador 1</td>
+                    <td class="tabla-vacio">0.5</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">0.5</td>
+                    <td>Jugador 2</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>Jugador 3</td>
+                    <td class="tabla-vacio">1</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">0</td>
+                    <td>Jugador 4</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>Jugador 5</td>
+                    <td class="tabla-vacio">0</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">1</td>
+                    <td>Jugador 6</td>
+                    <td>12/10/23</td>
+                </tr>
+                <tr>
+                    <td>Jugador 7</td>
+                    <td class="tabla-vacio">1</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">0</td>
+                    <td>Jugador 8</td>
+                    <td>12/10/23</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="mb-5">
+            <h3 class="mb-5">Jornada 1</h3>
+            <thead>
+                <tr class="titulo-tabla">
+                    <th>Jugador</th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th class="tabla-vacio"></th>
+                    <th>Jugador</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jugador 1</td>
+                    <td class="tabla-vacio">0.5</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">0.5</td>
+                    <td>Jugador 2</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>Jugador 3</td>
+                    <td class="tabla-vacio">1</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">0</td>
+                    <td>Jugador 4</td>
+                    <td>11/10/23</td>
+                </tr>
+                <tr>
+                    <td>Jugador 5</td>
+                    <td class="tabla-vacio">0</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">1</td>
+                    <td>Jugador 6</td>
+                    <td>12/10/23</td>
+                </tr>
+                <tr>
+                    <td>Jugador 7</td>
+                    <td class="tabla-vacio">1</td>
+                    <td class="tabla-vacio">-</td>
+                    <td class="tabla-vacio">0</td>
+                    <td>Jugador 8</td>
+                    <td>12/10/23</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container my-3 text-center" id="clasificacionFutbol">
+        <table class="mb-5">
+            <thead>
+                <tr class="titulo-tabla">
+                    <th>Posición</th>
+                    <th>Equipo</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1º</td>
+                    <td>1ºA</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>2º</td>
+                    <td>1ºB</td>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <td>3º</td>
+                    <td>1ºC</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>4º</td>
+                    <td>1ºD</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>5º</td>
+                    <td>2ºA</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>6º</td>
+                    <td>2ºB</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>7º</td>
+                    <td>2ºC</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>8º</td>
+                    <td>2ºD</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container my-3 text-center" id="clasificacionBaloncesto">
+        <table class="mb-5">
+            <thead>
+                <tr class="titulo-tabla">
+                    <th>Posición</th>
+                    <th>Equipo</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1º</td>
+                    <td>1ºA</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>2º</td>
+                    <td>1ºB</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3º</td>
+                    <td>1ºC</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>4º</td>
+                    <td>1ºD</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>5º</td>
+                    <td>2ºA</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>6º</td>
+                    <td>2ºB</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>7º</td>
+                    <td>2ºC</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>8º</td>
+                    <td>2ºD</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container my-3 text-center" id="clasificacionAjedrez">
+        <table class="mb-5">
+            <thead>
+                <tr class="titulo-tabla">
+                    <th>Posición</th>
+                    <th>Jugador</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1º</td>
+                    <td>Jugador 1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>2º</td>
+                    <td>Jugador 2</td>
+                    <td>1.5</td>
+                </tr>
+                <tr>
+                    <td>3º</td>
+                    <td>Jugador 3</td>
+                    <td>1.5</td>
+                </tr>
+                <tr>
+                    <td>4º</td>
+                    <td>Jugador 4</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>5º</td>
+                    <td>Jugador 5</td>
+                    <td>1.5</td>
+                </tr>
+                <tr>
+                    <td>6º</td>
+                    <td>Jugador 6</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>7º</td>
+                    <td>Jugador 7</td>
+                    <td>0.5</td>
+                </tr>
+                <tr>
+                    <td>8º</td>
+                    <td>Jugador 8</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function mostrarTabla() {
+            var deporte = document.getElementById("deporteSelect").value;
+            var tabla = document.getElementById("tablaSelect").value;
+
+            // Oculta todas las tablas
+            document.getElementById("resultadosFutbol").style.display = "none";
+            document.getElementById("resultadosBaloncesto").style.display = "none";
+            document.getElementById("resultadosAjedrez").style.display = "none";
+
+            document.getElementById("clasificacionFutbol").style.display = "none";
+            document.getElementById("clasificacionBaloncesto").style.display = "none";
+            document.getElementById("clasificacionAjedrez").style.display = "none";
+
+            // Muestra la tabla correspondiente según la selección
+            if (deporte === "futbol" && tabla === "resultado") {
+                document.getElementById("resultadosFutbol").style.display = "table";
+            } else if (deporte === "futbol" && tabla === "clasificacion") {
+                document.getElementById("clasificacionFutbol").style.display = "table";
+
+            } else if (deporte === "baloncesto" && tabla === "resultado") {
+                document.getElementById("resultadosBaloncesto").style.display = "table";
+            } else if (deporte === "baloncesto" && tabla === "clasificacion") {
+                document.getElementById("clasificacionBaloncesto").style.display = "table";
+
+            } else if (deporte === "ajedrez" && tabla === "resultado") {
+                document.getElementById("resultadosAjedrez").style.display = "table";
+            } else if (deporte === "ajedrez" && tabla === "clasificacion") {
+                document.getElementById("clasificacionAjedrez").style.display = "table";
+            }
+        }
+
+        // Llamar a la función una vez para mostrar la tabla predeterminada al cargar la página
+        mostrarTabla();
+    </script>
+
+    <!--Footer-->
+    <footer class="text-center text-lg-start pt-5">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-lg-4 mx-auto mb-4">
+                    <!--Enlaces-->
+                    <h5 class="text-uppercase fw-bold mb-4">Enlaces de interés</h5>
+                    <p><a href="https://www.educa.jccm.es/es" class="text-reset">Portal de educación</a></p>
+                    <p><a href="https://educamosclm.castillalamancha.es/" class="text-reset">EducamosCLM</a></p>
+                    <p><a href="#!" class="text-reset">Novedades</a></p>
+                    <p><a href="#!" class="text-reset">Actividades</a></p>
+                    <p><a href="#!" class="text-reset">Instalaciones</a></p>
+                </div>
+                <!--Información contacto-->
+                <div class="col-lg-4 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">Contacto</h5>
+                    <p><i class="fas fa-home"></i> Av Rio Tajo, 2E, 45220 Yeles, Toledo</p>
+                    <p><i class="fas fa-envelope"></i> info@example.com</p>
+                    <p><i class="fas fa-phone"></i> + 34 XXX XXX XXX</p>
+                </div>
+                <!--Google Maps-->
+                <div class="col-lg-4 mx-auto mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4">Mapa del centro</h5>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7256.013592775873!2d-3.8071389473301656!3d40.124952597004096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f7046560a06d%3A0x6a6f6ffe169dad0f!2sInstituto%20de%20educaci%C3%B3n%20secundaria%20obligatoria%20la%20galatea!5e0!3m2!1ses!2ses!4v1696330840965!5m2!1ses!2ses"
+                        width="auto" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            <p>© 2023 Copyright: <span class="fw-bold">IES La Galatea</span></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
