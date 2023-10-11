@@ -335,3 +335,30 @@ tbody tr:nth-child(even) {
     font-size: 1.2rem;
     color: white;
 }
+
+.borde-departamento {
+    border: 1px solid #043408;
+    border-radius: 10px;
+    width: auto;
+    background-color: #6f9387;
+}
+
+.actividad {
+    background-color: #E7F2EB;
+    transition: background-color 0.5s ease;
+}
+
+.actividad:hover {
+    background-color: #B8D3C8;
+}
+
+.borde-actividad {
+    border: 1px solid #043408;
+    border-radius: 10px;
+    width: auto;
+}
+
+.img-actividades {
+    border-radius: 10px;
+    max-height: 500px;
+}
