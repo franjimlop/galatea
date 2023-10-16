@@ -113,19 +113,40 @@ footer a:hover {
 
 /*Estilo del contenido despues del menu*/
 .fondo {
-    height: auto;
-    background-color: #6f9387;
     color: #031e05;
+    background-color: #6f9387;
+    /* Color de fondo */
+}
+
+.titulo-index {
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 /*Estilo de los card*/
 .card {
     background-color: #6f9387;
     color: #031e05;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Aplicamos flexbox con dirección vertical */
+    justify-content: space-between; /* Espacio entre los elementos */
+    height: 100%;
 }
 
 .color-titulo {
     color: #031e05;
+    font-size: 2.5rem;
+}
+
+.card-date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #6f9387;
+    color: #031e05;
+    padding: 5px 10px;
+    border-radius: 0 0 0 5px;
 }
 
 /*Estilo de los botones de ver mas*/
@@ -150,6 +171,10 @@ footer a:hover {
     border: 1px solid white;
 }
 
+.card-button {
+    padding-bottom: 15px;
+}
+
 /*Retoque para que las fotos de los card tengan la misma altura y un borde*/
 .custom-image {
     height: 15vh;
@@ -158,14 +183,8 @@ footer a:hover {
     border-bottom: 1px solid #031e05;
 }
 
-/*Retoque para que los card-title tengan la misma altura y por lo tanto los card-text empiecen a la misma altura*/
-.custom-card-title {
-    min-height: 3em;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    /* Establece el número máximo de líneas a mostrar */
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.card-title {
+    height: 2rem;
 }
 
 /*Retoque para que en los card-text aparezca como mucho tres lineas y lo demás se oculte y los ver mas estén a la misma altura todos*/
@@ -175,7 +194,6 @@ footer a:hover {
     /* Establece el número máximo de líneas a mostrar */
     -webkit-box-orient: vertical;
     overflow: hidden;
-    min-height: 5em;
 }
 
 /*El color que esté activo aparece marcado para ayudar visualmente a que no den al mismo en el que están*/
