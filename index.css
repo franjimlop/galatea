@@ -202,67 +202,13 @@ footer a:hover {
     color: white;
 }
 
-/*Imagen de instalaciones*/
-.img-instalaciones {
-    transition: all .5s ease-in-out;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 60%;
-}
-
-.img-instalaciones:hover {
-    filter: saturate(180%);
-}
-
-/*Texto de instalaciones*/
-.texto-instalaciones {
-    font-size: 1.2rem;
-    color: #6f9387;
-}
-
-.titulo-instalaciones {
-    font-size: 2.5rem;
-    color: #043408;
-    margin-bottom: 10px;
-}
-
 hr {
     margin: auto;
     width: 80%;
     color: #043408;
 }
 
-/* Estilo para el nombre de la directora */
-.directora-nombre {
-    font-size: 2.5rem;
-    color: #043408;
-    margin-bottom: 10px;
-}
-
-/* Estilo para el saludo de la directora */
-.directora-saludo {
-    font-size: 1.2rem;
-    color: #6f9387;
-}
-
-/* Estilo para la imagen de la directora */
-.directora-imagen {
-    border: 2px solid #043408;
-}
-
-.columna {
-    border-right: 1px solid #043408;
-    padding-left: 5% !important;
-}
-
-/* Estilo para ocultar la línea divisoria en tamaños md o menores */
 @media (max-width: 768px) {
-    .columna {
-        border-right: none !important;
-        padding-left: 0 !important;
-        padding-bottom: 10px;
-    }
-
     .titulo-modal {
         margin-top: 2% !important;
         margin-bottom: 3% !important;

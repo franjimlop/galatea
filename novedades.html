@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="novedades.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         crossorigin="anonymous">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -41,7 +42,6 @@
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                                     <li><a class="dropdown-item" href="instalaciones.html">Instalaciones</a></li>
-                                    <li><a class="dropdown-item" href="saludo.html">Saludo de la directora</a></li>
                                     <li><a class="dropdown-item" href="equipo.html">Equipo Directivo</a></li>
                                 </ul>
                             </li>
@@ -78,7 +78,7 @@
                             <!--Elemento Competiciones-->
                             <li class="nav-item px-2">
                                 <a class="nav-link efecto-menu" href="competiciones.html">Competiciones</a>
-                              </li>
+                            </li>
                             <!--Elemento Contacto-->
                             <li class="nav-item px-2">
                                 <a class="nav-link efecto-menu" href="contacto.html">Contacto</a>
@@ -127,27 +127,37 @@
     <div class="container text-center py-5">
         <div class="row pb-3">
             <!--4 cards en una linea, por debajo de lg de 2 en 2-->
-            <div class="col-lg-3 col-6 py-3">
+            <div class="col-xl-3 col-md-6 py-3">
                 <div class="card h-100">
                     <img class="card-img-top custom-image" src="images/libros.jpg">
                     <div class="card-body">
                         <h5 class="card-title custom-card-title">Adjudicadas becas libros curso 2023 / 2024</h5>
-                        <p class="card-text">Adjudicadas ya las becas definitivas para los libros de texto de todos los
-                            cursos de la ESO para el próximo curso</p>
+                        <p class="card-text pt-0 pt-md-3">Adjudicadas ya las becas definitivas para los libros de texto
+                            de todos los
+                            cursos de la
+                            ESO para el próximo curso</p>
+
+                    </div>
+                    <div class="card-button">
+                        <p class="card-date">16/10/2023</p>
                         <button class="btn-vermas" onclick="window.modal1.showModal();">Ver Más</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-6 py-3">
+            <div class="col-xl-3 col-md-6 py-3">
                 <div class="card h-100">
-                  <img class="card-img-top custom-image" src="images/instituto.jpeg">
-                  <div class="card-body">
-                    <h5 class="card-title custom-card-title">Matrícula curso 2023 / 2024</h5>
-                    <p class="card-text">Abierto el periodo de matriculación para los alumnos de la ESO</p>
-                    <button class="btn-vermas" onclick="window.modal2.showModal();">Ver Más</a>
-                  </div>
+                    <img class="card-img-top custom-image" src="images/instituto.jpeg">
+                    <div class="card-body">
+                        <h5 class="card-title custom-card-title">Matrícula curso 2023 / 2024</h5>
+                        <p class="card-text pt-0 pt-lg-3">Abierto el periodo de matriculación para los alumnos de la ESO
+                        </p>
+                    </div>
+                    <div class="card-button">
+                        <p class="card-date">15/10/2023</p>
+                        <button class="btn-vermas" onclick="window.modal2.showModal();">Ver Más</a>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
 
         <dialog id="modal1">
@@ -155,14 +165,16 @@
                 <div class="col-md-4"><img src="images/libros.jpg" class="img-fluid custom-image-modal"></div>
                 <div class="col-md-8 text-center">
                     <h1 class="mb-5 titulo-modal">Adjudicadas becas libros curso 2023 / 2024</h1>
-                    <p>Adjudicadas ya las becas definitivas para los libros de texto de todos los cursos de la ESO para el próximo curso</p>
+                    <p>Adjudicadas ya las becas definitivas para los libros de texto de todos los cursos de la ESO para
+                        el próximo curso</p>
                     <a href="images/pdf_ejemplo.pdf" download>
                         <i class="fa-solid fa-file-pdf fa-2xl" style="color: #7a0000;"></i>
                         <p class="pt-1">pdf_ejemplo.pdf</p>
                     </a>
                 </div>
             </div>
-            <div class="col-12 text-center mt-4"><button class="btn-vermas" onclick="window.modal1.close();">Cerrar</button></div>
+            <div class="col-12 text-center mt-4"><button class="btn-vermas"
+                    onclick="window.modal1.close();">Cerrar</button></div>
         </dialog>
         <dialog id="modal2">
             <div class="row">
@@ -170,14 +182,27 @@
                 <div class="col-md-8 text-center">
                     <h1 class="mb-5 titulo-modal">Matrícula curso 2023 / 2024</h1>
                     <p>Abierto el periodo de matriculación para los alumnos de la ESO</p>
-                    <a href="images/pdf_ejemplo.pdf" download>
-                        <i class="fa-solid fa-file-pdf fa-2xl" style="color: #7a0000;"></i>
-                        <p class="pt-1">pdf_ejemplo.pdf</p>
-                    </a>
+                    <div class="row py-3">
+                        <div class="col-6 col-md-3 col-lg-6">
+                            <a href="images/pdf_ejemplo.pdf" download>
+                                <i class="fa-solid fa-file-pdf fa-2xl" style="color: #7a0000;"></i>
+                                <p class="pt-1">pdf_ejemplo.pdf</p>
+                            </a>
+                        </div>
+                        <div class="col-6 col-md-3 col-lg-6">
+                            <a href="images/pdf_ejemplo.pdf" download>
+                                <i class="fa-solid fa-file-image fa-2xl"></i>
+                                <p class="pt-1">pdf_ejemplo.pdf</p>
+                            </a>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-            <div class="col-12 text-center mt-4"><button class="btn-vermas" onclick="window.modal2.close();">Cerrar</button></div>
-        </dialog>    
+            <div class="col-12 text-center mt-4"><button class="btn-vermas"
+                    onclick="window.modal2.close();">Cerrar</button></div>
+        </dialog>
     </div>
 
     <!--Footer-->
@@ -199,6 +224,13 @@
                     <p><i class="fas fa-home"></i> Av Rio Tajo, 2E, 45220 Yeles, Toledo</p>
                     <p><i class="fas fa-envelope"></i> info@example.com</p>
                     <p><i class="fas fa-phone"></i> + 34 XXX XXX XXX</p>
+                    <h5 class="text-uppercase fw-bold my-4">Redes Sociales</h5>
+                    <a href="" style="color: #043408;">
+                        <p><i class="fa-brands fa-x-twitter"></i> Twitter</p>
+                    </a>
+                    <a href="" style="color: #043408;">
+                        <p><i class="fa-brands fa-facebook"></i> Facebook</p>
+                    </a>
                 </div>
                 <!--Google Maps-->
                 <div class="col-lg-4 mx-auto mb-4">
