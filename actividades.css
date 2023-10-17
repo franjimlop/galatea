@@ -1,0 +1,31 @@
+.actividad {
+    background-color: #E7F2EB;
+    transition: background-color 0.8s ease;
+}
+
+.actividad:hover {
+    background-color: #B8D3C8;
+}
+
+.borde-actividad {
+    border: 1px solid #043408;
+    border-radius: 10px;
+    width: auto;
+}
+
+.img-actividades {
+    border-radius: 10px;
+    max-height: 500px;
+}
+
+.texto-actividad {
+    color: #043408;
+    font-size: 1rem;
+    display: none; /* Ocultar el contenido de texto al principio */
+}
+
+.toggle-actividad-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}

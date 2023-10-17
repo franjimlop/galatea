@@ -1,0 +1,46 @@
+/*Estilo tablas resultados y clasificaciones*/
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.custom-select select {
+    background-color: #043408;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    appearance: none;
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #043408;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+th,
+td {
+    border: 1px solid white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #079907;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #057505;
+}
+
+.tabla-vacio {
+    border-left: none;
+    border-right: none;
+}

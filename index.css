@@ -228,61 +228,15 @@ dialog {
 .custom-image-modal {
     border-radius: 10px;
     border: 1px solid #6f9387;
+    max-height: 15rem;
 }
 
 .custom-image-modal:hover {
     filter: saturate(180%);
 }
 
-/*Estilo tablas resultados y clasificaciones*/
-.custom-select {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-.custom-select select {
-    background-color: #043408;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    appearance: none;
-    width: 100%;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    background-color: #043408;
-    color: white;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.titulo3 {
-    font-size: 1.2em !important;
-}
-
-th,
-td {
-    border: 1px solid white;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    text-align: center;
-}
-
-tbody tr:nth-child(odd) {
-    background-color: #079907;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #057505;
-}
-
-.tabla-vacio {
-    border-left: none;
-    border-right: none;
+.texto-modal {
+    font-size: 1.2rem;
 }
 
 .nombre-contacto {
@@ -307,22 +261,21 @@ tbody tr:nth-child(even) {
     background-color: #6f9387;
 }
 
-.actividad {
-    background-color: #E7F2EB;
-    transition: background-color 0.5s ease;
+.estilo-letra-paginacion {
+    color: #031e05;
+    background-color: #6f9387;
 }
 
-.actividad:hover {
-    background-color: #B8D3C8;
+.estilo-letra-paginacion:hover {
+    color: white;
+    background-color: #031e05;
 }
 
-.borde-actividad {
-    border: 1px solid #043408;
-    border-radius: 10px;
-    width: auto;
+.active-paginacion {
+    color: white;
+    background-color: #031e05;
 }
-
-.img-actividades {
-    border-radius: 10px;
-    max-height: 500px;
+.active-paginacion:hover {
+    color: white;
+    background-color: #031e05;
 }

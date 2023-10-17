@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="actividades.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         crossorigin="anonymous">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -125,12 +126,12 @@
 
     <!--Actividades-->
     <div class="container py-5 text-center">
-        <div class="actividad borde-actividad color-titulo">
-            <h2 class="p-3">Excursión a Madrid</h2>
+        <div class="actividad borde-actividad">
+            <h2 class="p-3 color-titulo">Excursión a Madrid</h2>
             <div class="p-3">
                 <img src="images/madrid.jpg" class="img-actividades img-fluid">
             </div>
-            <div class="py-3 px-5 text-start">
+            <div class="py-3 px-5 text-start texto-actividad">
                 <p>
                     En una emocionante jornada que quedará grabada en la memoria de los estudiantes, los alumnos de
                     3º de nuestro centro llevaron a cabo una inolvidable excursión a la capital de España, Madrid.
@@ -171,9 +172,33 @@
                     estudiantes.
                 </p>
             </div>
+            <button class="toggle-actividad-btn py-3">
+                <i class="fas fa-chevron-down"></i>
+                <i class="fas fa-chevron-up"></i>
+            </button>
         </div>
     </div>
-    </div>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-actividad-btn');
+        const textoActividad = document.querySelector('.texto-actividad');
+        const chevronDown = toggleBtn.querySelector('.fa-chevron-down');
+        const chevronUp = toggleBtn.querySelector('.fa-chevron-up');
+    
+        let isCollapsed = true; // Inicialmente, el contenido está colapsado
+        // Asegurarse de que el estado inicial coincida con la apariencia inicial
+        textoActividad.style.display = isCollapsed ? 'none' : 'block';
+        chevronDown.style.display = isCollapsed ? 'block' : 'none';
+        chevronUp.style.display = isCollapsed ? 'none' : 'block';
+    
+        toggleBtn.addEventListener('click', () => {
+            isCollapsed = !isCollapsed;
+            // Cambiar la apariencia según el estado
+            textoActividad.style.display = isCollapsed ? 'none' : 'block';
+            chevronDown.style.display = isCollapsed ? 'block' : 'none';
+            chevronUp.style.display = isCollapsed ? 'none' : 'block';
+        });
+    </script>
 
     <!--Footer-->
     <footer class="text-center text-lg-start pt-5">
