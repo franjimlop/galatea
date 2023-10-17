@@ -44,3 +44,11 @@ tbody tr:nth-child(even) {
     border-left: none;
     border-right: none;
 }
+
+.ancho-columna {
+    width: 3%;
+}
+
+.ancho-fecha {
+    width: 16%;
+}
