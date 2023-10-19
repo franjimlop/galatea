@@ -259,13 +259,23 @@
 
     <script>
       function onClick(event) {
-        if (event.target === dialog) {
-          dialog.close();
+        const modal1 = document.getElementById("modal1");
+        const modal2 = document.getElementById("modal2");
+
+        if (event.target === modal1) {
+          modal1.close();
+        } else if (event.target === modal2) {
+          modal2.close();
         }
       }
-      const dialog = document.querySelector("dialog");
-      dialog.addEventListener("click", onClick);
+
+      const modal1 = document.getElementById("modal1");
+      const modal2 = document.getElementById("modal2");
+
+      modal1.addEventListener("click", onClick);
+      modal2.addEventListener("click", onClick);
     </script>
+
 
     <!--Botón para ver todas las novedades-->
     <a href="novedades.html" class="btn-vermas text-center mb-5">Ver todas las novedades</a>
