@@ -56,9 +56,11 @@
                                     Departamentos
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                    <li><a class="dropdown-item" href="#">Lengua Castellana y Literatura</a></li>
-                                    <li><a class="dropdown-item" href="#">Matemáticas</a></li>
-                                    <li><a class="dropdown-item" href="#">Física y Química</a></li>
+                                    <li><a class="dropdown-item" href="lenguacastellanayliteratura.html">Lengua
+                                            Castellana y
+                                            Literatura</a></li>
+                                    <li><a class="dropdown-item" href="matematicas.html">Matemáticas</a></li>
+                                    <li><a class="dropdown-item" href="fisicayquimica.html">Física y Química</a></li>
                                 </ul>
                             </li>
                             <!--Elemento Actividades-->
@@ -66,14 +68,8 @@
                                 <a class="nav-link efecto-menu" href="actividades.html">Actividades</a>
                             </li>
                             <!--Elemento Proyectos-->
-                            <li class="nav-item dropdown px-2">
-                                <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Proyectos
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                    <li><a class="dropdown-item" href="#">Mejor clase</a></li>
-                                </ul>
+                            <li class="nav-item px-2">
+                                <a class="nav-link efecto-menu" href="proyectos.html">Proyectos</a>
                             </li>
                             <!--Elemento Competiciones-->
                             <li class="nav-item px-2">
@@ -112,7 +108,8 @@
                             <!--Elemento Login-->
                             <div class="row justify-content-center align-content-center">
                                 <div class="col-auto">
-                                    <li class="nav-item px-2"><a href=""><i class="fa-solid fa-user"></i></a></li>
+                                    <li class="nav-item px-2"><a href="login.html"><i class="fa-solid fa-user"></i></a>
+                                    </li>
                                 </div>
                             </div>
                         </ul>
@@ -240,13 +237,14 @@
                 </div>
             </div>
         </div>
-
         <dialog id="modal1">
+            <button class="invisible-button" autofocus></button>
             <h1 class="mb-5 titulo-modal">Adjudicadas becas libros curso 2023 / 2024</h1>
             <img src="images/libros.jpg" class="img-fluid custom-image-modal">
             <p class="card-date">16/10/2023</p>
             <div class="p-4 text-center">
-                <p class="texto-modal">Adjudicadas ya las becas definitivas para los libros de texto de todos los cursos de la ESO para
+                <p class="texto-modal">Adjudicadas ya las becas definitivas para los libros de texto de todos los cursos
+                    de la ESO para
                     el próximo curso</p>
                 <div class="row py-4">
                     <div class="col-6 col-md-3">
@@ -267,6 +265,7 @@
                     onclick="window.modal1.close();">Cerrar</button></div>
         </dialog>
         <dialog id="modal2">
+            <button class="invisible-button" autofocus></button>
             <h1 class="mb-5 titulo-modal">Matrícula curso 2023 / 2024</h1>
             <img src="images/instituto.jpeg" class="img-fluid custom-image-modal">
             <p class="card-date">16/10/2023</p>
@@ -291,6 +290,15 @@
                     onclick="window.modal2.close();">Cerrar</button>
             </div>
         </dialog>
+        <script>
+            function onClick(event) {
+                if (event.target === dialog) {
+                    dialog.close();
+                }
+            }
+            const dialog = document.querySelector("dialog");
+            dialog.addEventListener("click", onClick);
+        </script>
     </div>
 
     <!--Paginación-->

@@ -104,7 +104,11 @@ footer a:hover {
     color: #6f9387;
     text-align: center;
     line-height: 30px;
-    font-size: 4vh
+    font-size: 4vh;
+}
+
+.centrar-toggler {
+    justify-content: center !important;
 }
 
 .navbar-collapse {
@@ -147,6 +151,19 @@ footer a:hover {
     color: #031e05;
     padding: 5px 10px;
     border-radius: 0 0 0 5px;
+}
+
+@media (max-width: 768px) {
+    .card-date {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #6f9387;
+        color: #031e05;
+        padding: 4px 8px;
+        border-radius: 0 0 0 5px;
+        font-size: 0.8rem;
+    }
 }
 
 /*Estilo de los botones de ver mas*/
@@ -213,6 +230,10 @@ hr {
         margin-top: 2% !important;
         margin-bottom: 3% !important;
     }
+}
+
+.invisible-button {
+    opacity: 0;
 }
 
 /*Estilo de las ventanas modales que salen al pulsar el ver más */
