@@ -1,26 +1,42 @@
+.nombre-contacto {
+    color: #f2f2f2;
+}
+
+.texto-contacto {
+    color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #333333;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
-    background-color: #043408;
-    color: white;
-    border: 1px solid black;
+    background-color: #12816c;
+    color: #333333;
+    border: 1px solid #333333;
     border-radius: 5px;
 }
 
 th,
 td {
-    border: 1px solid white;
+    border: 1px solid #333333;
     padding-top: 1%;
     padding-bottom: 1%;
     text-align: center;
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #079907;
+    background-color: #127c5b;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #057505;
+    background-color: #0d6a4a;
 }
 
 .tabla-vacio {
