@@ -1,7 +1,7 @@
 /*El header tiene una altura automática y su color de letra*/
 .navega {
     height: auto;
-    color: #8e44ad;
+    color: #16a085;
 }
 
 /*Tamaño del logo responsivo*/
@@ -21,7 +21,7 @@
     display: none;
     position: absolute;
     background-color: #f2f2f2;
-    border: 1px solid #8e44ad;
+    border: 1px solid #16a085;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     font-weight: bolder;
@@ -29,7 +29,7 @@
 
 /*Estilo de los elementos del dropdown-menu*/
 .dropdown-menu a {
-    color: #8e44ad;
+    color: #16a085;
     padding: 9px 15px;
     text-decoration: none;
     display: block;
@@ -37,17 +37,17 @@
 
 /*Estilo de los elementos del dropdown-menu cuando se pasa por encima*/
 .dropdown-menu a:hover {
-    background-color: #8e44ad;
+    background-color: #16a085;
     color: #f2f2f2;
 }
 
 /*Estilo del simbolo del login*/
 .fa-user {
-    color: #8e44ad;
+    color: #16a085;
 }
 
 .fa-user:hover {
-    color: #ffd700;
+    color: #333333;
 }
 
 /*Arreglo del simbolo del login para que esté centrado siempre*/
@@ -58,7 +58,7 @@
 
 /*Estilo del footer*/
 footer {
-    background-color: #6b2c80;
+    background-color: #12816c;
     color: #f2f2f2 !important;
 }
 
@@ -68,7 +68,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #ffd700 !important;
+    color: #333333 !important;
 }
 
 /*Retoque del menú*/
@@ -87,7 +87,7 @@ footer a:hover {
     width: 100%;
     height: 2px;
     border-radius: 4px;
-    background-color: #ffd700;
+    background-color: #333333;
     bottom: 0;
     left: 0;
     transform-origin: right;
@@ -105,7 +105,7 @@ footer a:hover {
     width: 5vh;
     height: 4vh;
     display: inline-block;
-    color: #8e44ad;
+    color: #16a085;
     text-align: center;
     line-height: 30px;
     font-size: 4vh;
@@ -122,7 +122,7 @@ footer a:hover {
 /*Estilo del contenido despues del menu*/
 .fondo {
     color: #f2f2f2;
-    background-color: #8e44ad;
+    background-color: #16a085;
     /* Color de fondo */
 }
 
@@ -133,7 +133,7 @@ footer a:hover {
 
 /*Estilo de los card*/
 .card {
-    background-color: #8e44ad;
+    background-color: #16a085;
     color: #f2f2f2;
     position: relative;
     display: flex;
@@ -143,7 +143,7 @@ footer a:hover {
 }
 
 .color-titulo {
-    color: #8e44ad;
+    color: #f2f2f2;
     font-size: 2.5rem;
 }
 
@@ -151,7 +151,7 @@ footer a:hover {
     position: absolute;
     top: 0;
     right: 0;
-    background: #8e44ad;
+    background: #16a085;
     color: #f2f2f2;
     padding: 5px 10px;
     border-radius: 0 0 0 5px;
@@ -162,7 +162,7 @@ footer a:hover {
         position: absolute;
         top: 0;
         right: 0;
-        background: #8e44ad;
+        background: #16a085;
         color: #f2f2f2;
         padding: 4px 8px;
         border-radius: 0 0 0 5px;
@@ -174,22 +174,22 @@ footer a:hover {
 .btn-vermas {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #6b2c80;
-    color: #ffd700;
+    background-color: #12816c;
+    color: #333333;
     text-decoration: none;
     border-radius: 20px;
-    border: 1px solid #ffd700;
+    border: 1px solid #333333;
 }
 
 /*Estilo de los botones de ver mas al pasar por encima*/
 .btn-vermas:hover {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ffd700;
-    color: #6b2c80;
+    background-color: #333333;
+    color: #12816c;
     text-decoration: none;
     border-radius: 20px;
-    border: 1px solid #6b2c80;
+    border: 1px solid #12816c;
 }
 
 .card-button {
@@ -201,7 +201,7 @@ footer a:hover {
     height: 15vh;
     object-fit: cover;
     width: 100%;
-    border-bottom: 1px solid #ffd700;
+    border-bottom: 1px solid #333333;
 }
 
 .card-title {
@@ -219,14 +219,14 @@ footer a:hover {
 
 /*El color que esté activo aparece marcado para ayudar visualmente a que no den al mismo en el que están*/
 .dropdown-item.active {
-    background-color: #8e44ad;
+    background-color: #12816c;
     color: #f2f2f2;
 }
 
 hr {
     margin: auto;
     width: 80%;
-    color: #8e44ad;
+    color: #333333;
 }
 
 @media (max-width: 768px) {
@@ -245,14 +245,14 @@ dialog {
     width: 80%;
     max-height: 80%;
     border-radius: 10px;
-    border: 3px solid #8e44ad;
-    color: #8e44ad;
+    border: 3px solid #12816c;
+    color: #12816c;
     overflow-y: auto;
 }
 
 .custom-image-modal {
     border-radius: 10px;
-    border: 1px solid #8e44ad;
+    border: 1px solid #12816c;
     max-height: 15rem;
 }
 
@@ -266,12 +266,12 @@ dialog {
 
 .nombre-contacto {
     font-size: 2.5rem;
-    color: #8e44ad;
+    color: #12816c;
 }
 
 .texto-contacto {
     font-size: 1.5rem;
-    color: #8e44ad;
+    color: #12816c;
 }
 
 .texto-horario {
@@ -280,29 +280,29 @@ dialog {
 }
 
 .borde-departamento {
-    border: 1px solid #ffd700;
+    border: 1px solid #333333;
     border-radius: 10px;
     width: auto;
-    background-color: #8e44ad;
+    background-color: #12816c;
 }
 
 .estilo-letra-paginacion {
-    color: #ffd700;
-    background-color: #8e44ad;
+    color: #333333;
+    background-color: #12816c;
 }
 
 .estilo-letra-paginacion:hover {
-    color: #8e44ad;
-    background-color: #ffd700;
+    color: #12816c;
+    background-color: #333333;
 }
 
 .active-paginacion {
-    color: #8e44ad;
-    background-color: #ffd700;
+    color: #12816c;
+    background-color: #333333;
 }
 .active-paginacion:hover {
-    color: #8e44ad;
-    background-color: #ffd700;
+    color: #12816c;
+    background-color: #333333;
 }
 
 /*Imagen de instalaciones*/
@@ -330,14 +330,10 @@ dialog {
     }
 }
 
-.carousel-inner {
-    mix-blend-mode: hard-light;
-}
-
 .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffd700' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%333333' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
 
 .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffd700' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%333333' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
