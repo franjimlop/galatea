@@ -133,25 +133,28 @@ footer a:hover {
 
 /*Estilo de los card*/
 .card {
-    background-color: #8e44ad;
-    color: #f2f2f2;
+    background-color: #ffd700;
+    color: #6b2c80;
     position: relative;
     display: flex;
-    flex-direction: column; /* Aplicamos flexbox con dirección vertical */
-    justify-content: space-between; /* Espacio entre los elementos */
+    flex-direction: column;
+    /* Aplicamos flexbox con dirección vertical */
+    justify-content: space-between;
+    /* Espacio entre los elementos */
     height: 100%;
+    border: 1px solid #6b2c80;
 }
 
 .color-titulo {
-    color: #8e44ad;
-    font-size: 2.5rem;
+    color: #f2f2f2;
+    font-size: 5vh;
 }
 
 .card-date {
     position: absolute;
     top: 0;
     right: 0;
-    background: #8e44ad;
+    background: #6b2c80;
     color: #f2f2f2;
     padding: 5px 10px;
     border-radius: 0 0 0 5px;
@@ -162,7 +165,7 @@ footer a:hover {
         position: absolute;
         top: 0;
         right: 0;
-        background: #8e44ad;
+        background: #6b2c80;
         color: #f2f2f2;
         padding: 4px 8px;
         border-radius: 0 0 0 5px;
@@ -174,18 +177,38 @@ footer a:hover {
 .btn-vermas {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #6b2c80;
+    background-color: #8e44ad;
     color: #ffd700;
     text-decoration: none;
     border-radius: 20px;
-    border: 1px solid #ffd700;
+    border: 1px solid #6b2c80;
+}
+
+.btn-vertodas {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #6b2c80;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid #6b2c80;
 }
 
 /*Estilo de los botones de ver mas al pasar por encima*/
 .btn-vermas:hover {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ffd700;
+    background-color: #6b2c80;
+    color: #ffd700;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid #6b2c80;
+}
+
+.btn-vertodas:hover {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #CCAA00;
     color: #6b2c80;
     text-decoration: none;
     border-radius: 20px;
@@ -245,14 +268,15 @@ dialog {
     width: 80%;
     max-height: 80%;
     border-radius: 10px;
-    border: 3px solid #8e44ad;
+    border: 3px solid #6b2c80;
     color: #8e44ad;
     overflow-y: auto;
+    background-color: #f2f2f2;
 }
 
 .custom-image-modal {
     border-radius: 10px;
-    border: 1px solid #8e44ad;
+    border: 1px solid #6b2c80;
     max-height: 15rem;
 }
 
@@ -286,32 +310,40 @@ dialog {
     background-color: #8e44ad;
 }
 
+.page-link {
+    border: 1px solid #6b2c80;
+}
+
+.page-link:hover {
+    border: 1px solid #ffd700;
+}
+
 .estilo-letra-paginacion {
+    color: #8e44ad;
+    background-color: #ffd700;
+}
+
+.estilo-letra-paginacion:hover {
     color: #ffd700;
     background-color: #8e44ad;
 }
 
-.estilo-letra-paginacion:hover {
-    color: #8e44ad;
-    background-color: #ffd700;
+.active-paginacion {
+    color: #ffd700;
+    background-color: #8e44ad;
 }
 
-.active-paginacion {
-    color: #8e44ad;
-    background-color: #ffd700;
-}
 .active-paginacion:hover {
-    color: #8e44ad;
-    background-color: #ffd700;
+    color: #ffd700;
+    background-color: #8e44ad;
 }
 
 /*Imagen de instalaciones*/
 .img-instalaciones {
     transition: all .5s ease-in-out;
-    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 70%;
-    height: 50vh;
+    width: 100%;
+    height: 75vh;
 }
 
 .img-instalaciones:hover {
@@ -328,10 +360,6 @@ dialog {
     .img-instalaciones {
         height: 200px;
     }
-}
-
-.carousel-inner {
-    mix-blend-mode: hard-light;
 }
 
 .carousel-control-prev-icon {
