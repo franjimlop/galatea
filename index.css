@@ -303,13 +303,6 @@ dialog {
     color: #f2f2f2;
 }
 
-.borde-departamento {
-    border: 1px solid #ffd700;
-    border-radius: 10px;
-    width: auto;
-    background-color: #8e44ad;
-}
-
 .page-link {
     border: 1px solid #6b2c80;
 }
