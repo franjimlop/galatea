@@ -7,6 +7,12 @@
     height: 50vh !important;
 }
 
+@media (max-width: 768px) {
+    .img-instalaciones {
+        height: 20vh !important;
+    }
+}
+
 .img-instalaciones:hover {
     filter: saturate(180%);
 }

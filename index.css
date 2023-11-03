@@ -145,6 +145,16 @@ footer a:hover {
     border: 1px solid #6b2c80;
 }
 
+@media (max-width: 768px) {
+    .card {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .card-title {
+        margin-bottom: 8%;
+    }
+}
+
 .color-titulo {
     color: #f2f2f2;
     font-size: 5vh;

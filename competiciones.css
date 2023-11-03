@@ -48,7 +48,3 @@ tbody tr:nth-child(even) {
 .ancho-columna {
     width: 3%;
 }
-
-.ancho-fecha {
-    width: 16%;
-}

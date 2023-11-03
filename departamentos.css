@@ -6,6 +6,16 @@
     color: #6b2c80;
 }
 
+@media (max-width: 768px) {
+  .borde-departamento {
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+  h2 {
+    margin-top: 5%;
+  }
+}
+
 /* Estilos para personalizar el select */
 .custom-select {
     padding: 8px 12px;
