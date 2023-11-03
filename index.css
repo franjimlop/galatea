@@ -145,7 +145,7 @@ footer a:hover {
     border: 1px solid #6b2c80;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .card {
         margin-left: 10%;
         margin-right: 10%;
