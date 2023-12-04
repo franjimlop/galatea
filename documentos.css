@@ -13,10 +13,10 @@ li {
 /* Estilo para los enlaces */
 li a {
   text-decoration: underline;
-  color: #ffd700;
+  color: #f5e1da;
   font-weight: bold;
 }
 
 li a:hover {
-  color: #CCAA00;
+  color: #ff99cc;
 }

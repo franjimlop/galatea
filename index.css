@@ -1,7 +1,8 @@
 /*El header tiene una altura automática y su color de letra*/
 .navega {
     height: auto;
-    color: #8e44ad;
+    color: #004d40;
+    background-color: #f5e1da;
 }
 
 /*Tamaño del logo responsivo*/
@@ -20,8 +21,8 @@
     list-style: none;
     display: none;
     position: absolute;
-    background-color: #f2f2f2;
-    border: 1px solid #8e44ad;
+    background-color: #f5e1da;
+    border: 1px solid #004d40;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     font-weight: bolder;
@@ -29,7 +30,7 @@
 
 /*Estilo de los elementos del dropdown-menu*/
 .dropdown-menu a {
-    color: #8e44ad;
+    color: #004d40;
     padding: 9px 15px;
     text-decoration: none;
     display: block;
@@ -37,17 +38,17 @@
 
 /*Estilo de los elementos del dropdown-menu cuando se pasa por encima*/
 .dropdown-menu a:hover {
-    background-color: #8e44ad;
-    color: #f2f2f2;
+    background-color: #004d40;
+    color: #f5e1da;
 }
 
 /*Estilo del simbolo del login*/
 .fa-user {
-    color: #8e44ad;
+    color: #004d40;
 }
 
 .fa-user:hover {
-    color: #ffd700;
+    color: #ff99cc;
 }
 
 /*Arreglo del simbolo del login para que esté centrado siempre*/
@@ -58,8 +59,8 @@
 
 /*Estilo del footer*/
 footer {
-    background-color: #6b2c80;
-    color: #f2f2f2 !important;
+    background-color: #f5e1da;
+    color: #004d40 !important;
 }
 
 footer a {
@@ -68,7 +69,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #ffd700 !important;
+    color: #ff99cc !important;
 }
 
 /*Retoque del menú*/
@@ -87,7 +88,7 @@ footer a:hover {
     width: 100%;
     height: 2px;
     border-radius: 4px;
-    background-color: #ffd700;
+    background-color: #ff99cc;
     bottom: 0;
     left: 0;
     transform-origin: right;
@@ -105,7 +106,7 @@ footer a:hover {
     width: 5vh;
     height: 4vh;
     display: inline-block;
-    color: #8e44ad;
+    color: #004d40;
     text-align: center;
     line-height: 30px;
     font-size: 4vh;
@@ -121,8 +122,8 @@ footer a:hover {
 
 /*Estilo del contenido despues del menu*/
 .fondo {
-    color: #f2f2f2;
-    background-color: #8e44ad;
+    color: #f5e1da;
+    background-color: #004d40;
     /* Color de fondo */
 }
 
@@ -133,16 +134,14 @@ footer a:hover {
 
 /*Estilo de los card*/
 .card {
-    background-color: #ffd700;
-    color: #6b2c80;
+    background-color: #ff99cc;
+    color: #004d40;
     position: relative;
     display: flex;
     flex-direction: column;
-    /* Aplicamos flexbox con dirección vertical */
     justify-content: space-between;
-    /* Espacio entre los elementos */
     height: 100%;
-    border: 1px solid #6b2c80;
+    border: 1px solid #ff99cc;
 }
 
 @media (max-width: 992px) {
@@ -156,7 +155,7 @@ footer a:hover {
 }
 
 .color-titulo {
-    color: #f2f2f2;
+    color: #f5e1da;
     font-size: 5vh;
 }
 
@@ -164,8 +163,8 @@ footer a:hover {
     position: absolute;
     top: 0;
     right: 0;
-    background: #6b2c80;
-    color: #f2f2f2;
+    background: #004d40;
+    color: #f5e1da;
     padding: 5px 10px;
     border-radius: 0 0 0 5px;
 }
@@ -175,8 +174,8 @@ footer a:hover {
         position: absolute;
         top: 0;
         right: 0;
-        background: #6b2c80;
-        color: #f2f2f2;
+        background: #004d40;
+        color: #f5e1da;
         padding: 4px 8px;
         border-radius: 0 0 0 5px;
         font-size: 0.8rem;
@@ -187,42 +186,42 @@ footer a:hover {
 .btn-vermas {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #8e44ad;
-    color: #ffd700;
+    background-color: #004d40;
+    color: #f5e1da;
     text-decoration: none;
     border-radius: 20px;
-    border: 1px solid #6b2c80;
+    border: 1px solid #004d40;
 }
 
 .btn-vertodas {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ffd700;
-    color: #6b2c80;
+    background-color: #ff99cc;
+    color: #004d40;
     text-decoration: none;
     border-radius: 20px;
-    border: 1px solid #6b2c80;
+    border: 1px solid #004d40;
 }
 
 /*Estilo de los botones de ver mas al pasar por encima*/
 .btn-vermas:hover {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #6b2c80;
-    color: #ffd700;
+    background-color: #f5e1da;
+    color: #004d40;
     text-decoration: none;
     border-radius: 20px;
-    border: 1px solid #6b2c80;
+    border: 1px solid #f5e1da;
 }
 
 .btn-vertodas:hover {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #CCAA00;
-    color: #6b2c80;
+    background-color: #f5e1da;
+    color: #004d40;
     text-decoration: none;
     border-radius: 20px;
-    border: 1px solid #6b2c80;
+    border: 1px solid #ff99cc;
 }
 
 .card-button {
@@ -234,7 +233,7 @@ footer a:hover {
     height: 15vh;
     object-fit: cover;
     width: 100%;
-    border-bottom: 1px solid #ffd700;
+    border-bottom: 1px solid #004d40;
 }
 
 .card-title {
@@ -252,14 +251,14 @@ footer a:hover {
 
 /*El color que esté activo aparece marcado para ayudar visualmente a que no den al mismo en el que están*/
 .dropdown-item.active {
-    background-color: #8e44ad;
-    color: #f2f2f2;
+    background-color: #004d40;
+    color: #f5e1da;
 }
 
 hr {
     margin: auto;
     width: 80%;
-    color: #8e44ad;
+    color: #004d40;
 }
 
 @media (max-width: 768px) {
@@ -278,15 +277,15 @@ dialog {
     width: 80%;
     max-height: 80%;
     border-radius: 10px;
-    border: 3px solid #6b2c80;
-    color: #8e44ad;
+    border: 3px solid #004d40;
+    color: #004d40;
     overflow-y: auto;
-    background-color: #f2f2f2;
+    background-color: #f5e1da;
 }
 
 .custom-image-modal {
     border-radius: 10px;
-    border: 1px solid #6b2c80;
+    border: 1px solid #004d40;
     max-height: 15rem;
 }
 
@@ -300,45 +299,45 @@ dialog {
 
 .nombre-contacto {
     font-size: 2.5rem;
-    color: #8e44ad;
+    color: #004d40;
 }
 
 .texto-contacto {
     font-size: 1.5rem;
-    color: #8e44ad;
+    color: #004d40;
 }
 
 .texto-horario {
     font-size: 1.2rem;
-    color: #f2f2f2;
+    color: #f5e1da;
 }
 
 .page-link {
-    border: 1px solid #6b2c80;
+    border: 1px solid #004d40;
 }
 
 .page-link:hover {
-    border: 1px solid #ffd700;
+    border: 1px solid #ff99cc;
 }
 
 .estilo-letra-paginacion {
-    color: #8e44ad;
-    background-color: #ffd700;
+    color: #004d40;
+    background-color: #ff99cc;
 }
 
 .estilo-letra-paginacion:hover {
-    color: #ffd700;
-    background-color: #8e44ad;
+    color: #ff99cc;
+    background-color: #004d40;
 }
 
 .active-paginacion {
-    color: #ffd700;
-    background-color: #8e44ad;
+    color: #ff99cc;
+    background-color: #004d40;
 }
 
 .active-paginacion:hover {
-    color: #ffd700;
-    background-color: #8e44ad;
+    color: #ff99cc;
+    background-color: #004d40;
 }
 
 /*Imagen de instalaciones*/
@@ -366,9 +365,16 @@ dialog {
 }
 
 .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffd700' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%ff99cc' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
 
 .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ffd700' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%ff99cc' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.borde-departamento {
+    border: 1px solid #ff99cc;
+    border-radius: 10px;
+    width: auto;
+    background-color: #004d40;
 }

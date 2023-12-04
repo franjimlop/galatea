@@ -2,202 +2,275 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="galatea.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        crossorigin="anonymous">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="galatea.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    crossorigin="anonymous">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
-    <title>IES La Galatea</title>
+  <title>IES La Galatea</title>
 </head>
 
 <body>
-    <!--Menú-->
-    <div class="navega">
-        <div class="container">
-          <!--Se colapsa cuando sea xl-->
-          <nav class="navbar navbar-expand-xl navbar-light align-content-center">
-            <div class="container-fluid">
-              <!--Logo-->
-              <a class="navbar-brand" href="index.html"><img src="images/LA_GALATEA_sin_fondo.png" class="foto-logo"></a>
-              <button class="navbar-toggler centrar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <!--Que aparece cuando se colapsa-->
-                <span class="custom-toggler-icon">☰</span>
-              </button>
-              <!--Lo que hay dentro de aquí se colapsa-->
-              <div class="collapse navbar-collapse letra-menu" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <!--Elemento Nuestro Centro-->
-                  <li class="nav-item dropdown px-2">
-                    <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      Centro
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                      <li><a class="dropdown-item" href="centro.html">Nuestro Centro</a></li>
-                      <li><a class="dropdown-item" href="documentos.html">Documentos</a></li>
-                      <li><a class="dropdown-item" href="consejo.html">Consejo Escolar</a></li>
-                      <li><a class="dropdown-item" href="galatea.html">Galatea</a></li>
-                    </ul>
-                  </li>
-                  <!--Elemento Secretaria-->
-                  <li class="nav-item dropdown px-2">
-                    <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      Secretaría
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                      <li><a class="dropdown-item" href="noticias.html">Noticias</a></li>
-                      <li><a class="dropdown-item" href="tramites.html">Trámites Administrativos</a></li>
-                    </ul>
-                  </li>
-                  <!--Elemento Departamentos-->
-                  <li class="nav-item px-2">
-                    <a class="nav-link efecto-menu" href="departamentos.html">Departamentos</a>
-                  </li>
-                  <!--Elemento Curso Actual-->
-                  <li class="nav-item dropdown px-2">
-                    <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      Curso Actual
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                      <li><a class="dropdown-item" href="blogs.html">Blogs</a></li>
-                      <li><a class="dropdown-item" href="proyectos.html">Proyectos</a></li>
-                      <li><a class="dropdown-item" href="calendario.html">Calendarios</a></li>
-                    </ul>
-                  </li>
-                  <!--Elemento Competiciones-->
-                  <li class="nav-item px-2">
-                    <a class="nav-link efecto-menu" href="competiciones.html">Competiciones</a>
-                  </li>
-                  <!--Elemento Contacto-->
-                  <li class="nav-item px-2">
-                    <a class="nav-link efecto-menu" href="contacto.html">Contacto</a>
-                  </li>
-                  <!--Elemento Login-->
-                  <div class="row justify-content-center align-content-center">
-                    <div class="col-auto">
-                      <li class="nav-item px-2"><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
-                    </div>
-                  </div>
+  <!--Menú-->
+  <div class="navega">
+    <div class="container">
+      <!--Se colapsa cuando sea xl-->
+      <nav class="navbar navbar-expand-xl navbar-light align-content-center">
+        <div class="container-fluid">
+          <!--Logo-->
+          <a class="navbar-brand" href="index.html"><img src="images/LA_GALATEA_sin_fondo.png" class="foto-logo"></a>
+          <button class="navbar-toggler centrar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <!--Que aparece cuando se colapsa-->
+            <span class="custom-toggler-icon">☰</span>
+          </button>
+          <!--Lo que hay dentro de aquí se colapsa-->
+          <div class="collapse navbar-collapse letra-menu" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item px-2">
+                <a class="nav-link efecto-menu" href="index.html">Inicio</a>
+              </li>
+              <!--Elemento Nuestro Centro-->
+              <li class="nav-item dropdown px-2">
+                <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Centro
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="centro.html">Nuestro Centro</a></li>
+                  <li><a class="dropdown-item" href="consejo.html">Consejo Escolar</a></li>
+                  <li><a class="dropdown-item" href="galatea.html">Galatea</a></li>
                 </ul>
+              </li>
+              <!--Elemento Secretaria-->
+              <li class="nav-item dropdown px-2">
+                <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Secretaría
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">                  
+                  <li><a class="dropdown-item" href="documentos.html">Documentos</a></li>
+                  <li><a class="dropdown-item" href="becas.html">Becas</a></li>
+                  <li><a class="dropdown-item" href="licencias.html">Licencias Digitales</a></li>
+                  <li><a class="dropdown-item" href="matriculas.html">Matrículas</a></li>
+                </ul>
+              </li>
+              <!--Elemento Departamentos-->
+              <li class="nav-item dropdown px-2">
+                <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Departamentos
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">                  
+                  <li><a class="dropdown-item" href="departamentos.html">Departamento</a></li>
+                  <li><a class="dropdown-item" href="departamentos.html">Departamento</a></li>
+                  <li><a class="dropdown-item" href="departamentos.html">Departamento</a></li>
+                  <li><a class="dropdown-item" href="departamentos.html">Departamento</a></li>
+                  <li><a class="dropdown-item" href="departamentos.html">Departamento</a></li>
+                  <li><a class="dropdown-item" href="departamentos.html">Departamento</a></li>
+                </ul>
+              </li>
+              <!--Elemento Curso Actual-->
+              <li class="nav-item dropdown px-2">
+                <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Curso Actual
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">                  
+                  <li><a class="dropdown-item" href="noticias.html">Noticias</a></li>
+                  <li><a class="dropdown-item" href="proyectos.html">Proyectos</a></li>
+                  <li><a class="dropdown-item" href="calendario.html">Calendarios</a></li>
+                </ul>
+              </li>
+              <!--Elemento Actividades-->
+              <li class="nav-item dropdown px-2">
+                <a class="nav-link dropdown-toggle efecto-menu" href="#" id="navbarScrollingDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Actividades
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">                  
+                  <li><a class="dropdown-item" href="complementarias.html">Actividades Complementarias</a></li>
+                  <li><a class="dropdown-item" href="extraescolares.html">Actividades Extraescolares</a></li>
+                  <li><a class="dropdown-item" href="competiciones.html">Competiciones</a></li>
+                </ul>
+              </li>
+              <!--Elemento Contacto-->
+              <li class="nav-item px-2">
+                <a class="nav-link efecto-menu" href="contacto.html">Contacto</a>
+              </li>
+              <!--Elemento Login-->
+              <div class="row justify-content-center align-content-center">
+                <div class="col-auto">
+                  <li class="nav-item px-2"><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+                </div>
               </div>
-            </div>
-          </nav>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <div class="fondo py-3">
+    <div class="container text-center">
+      <h1 class="titulo-galatea mt-5">Galatea: La Ninfa Marina</h1>
+      <div class="row mt-5 align-items-center">
+        <div class="col-md-6 px-5 margen-galatea">
+          <p class="text-center pregunta-galatea mb-4">¿Quién es?</p>
+          <p class="texto-galatea text-start">Galatea era una de las cincuenta Nereidas, hijas de Nereo, el anciano dios
+            del mar, y su esposa
+            Doris, quien personificaba la riqueza del mar. Las Nereidas eran consideradas como ninfas
+            marinas, y cada una de ellas tenía su propia personalidad y atributos distintivos. Galatea se
+            destacaba por su belleza y gracia, lo que la convertía en una de las nereidas más destacadas en
+            la mitología griega.</p>
+        </div>
+        <div class="col-md-6 margen-galatea">
+          <img src="images/galatea1.jpg" class="img-galatea img-fluid">
+        </div>
+
+        <div class="col-md-6 margen-galatea">
+          <img src="images/galatea2.jpg" class="img-galatea img-fluid">
+        </div>
+        <div class="col-md-6 px-5 margen-galatea">
+          <p class="text-center pregunta-galatea mb-4">¿Cuál es su historia?</p>
+          <p class="texto-galatea  text-start">Galatea, como se mencionó anteriormente, era una de las Nereidas, ninfas
+            marinas conocidas por su belleza y gracia. Un día, mientras Galatea paseaba por la costa, conoció a Acis, un
+            joven pastor de gran atractivo. Ambos se enamoraron profundamente el uno del otro, y su amor floreció en la
+            costa de Sicilia.
+            Sin embargo, el problema surgió cuando Polifemo, el cíclope, se enamoró locamente de Galatea. Polifemo, un
+            ser monstruoso con un solo ojo en medio de la frente, comenzó a cortejar a Galatea con gran intensidad. Ella
+            rechazó sus avances, lo que enfureció al cíclope. Polifemo, cegado por los celos y la ira, no podía soportar
+            que Galatea amara a un mortal en lugar de a él.
+            En su desesperación y rabia, Polifemo arrojó una inmensa roca hacia Acis, el amado de Galatea, mientras este
+            se encontraba en la costa. La roca impactó a Acis y lo mató instantáneamente. Galatea, desconsolada por la
+            pérdida de su amado, no pudo hacer nada para impedir la tragedia.
+            Para preservar el recuerdo de Acis y permitirle vivir en alguna forma, Galatea lo transformó en un río. El
+            río recibió el nombre de "Río Acis" en su honor y fluyó eternamente, llevando el espíritu de Acis consigo.
+            En este acto, Galatea demostró su inquebrantable amor y su capacidad de otorgar la inmortalidad a su amado
+            de una manera simbólica.</p>
+        </div>
+
+        <div class="col-md-6 px-5 margen-galatea">
+          <p class="text-center pregunta-galatea mb-4">La Galatea de Cervantes</p>
+          <p class="texto-galatea text-start">"La Galatea" es una obra temprana y menos conocida de Miguel de Cervantes,
+            escrita en 1585. Es considerada una novela pastoril y marca el inicio de la carrera literaria de Cervantes.
+            La obra está compuesta por seis libros y es una combinación de prosa y poesía. La trama gira en torno a los
+            amores y desventuras de los pastores Elicio y Erastro, quienes están enamorados de Galatea.<br><br>
+
+            Aunque "La Galatea" no alcanzó la fama de las obras posteriores de Cervantes, como "Don Quijote de la
+            Mancha", contiene elementos que sugieren la maestría literaria del autor. En la obra, Cervantes experimenta
+            con diversos estilos y géneros literarios, incorporando elementos líricos y pastoriles.<br><br>
+
+            La novela refleja las convenciones del género pastoril, que se caracteriza por presentar un mundo idealizado
+            y bucólico, poblado por pastores que viven en armonía con la naturaleza. Además de explorar temas amorosos,
+            "La Galatea" también aborda cuestiones más profundas, como la naturaleza de la poesía y la literatura.<br><br>
+
+            Es importante destacar que "La Galatea" no tuvo el éxito inmediato que Cervantes esperaba, y el autor a
+            menudo expresó su insatisfacción con la recepción de la obra. Sin embargo, esta novela sirvió como un primer
+            paso en la carrera literaria de Cervantes y sentó las bases para sus obras maestras posteriores.</p>
+        </div>
+        <div class="col-md-6 margen-galatea">
+          <img src="images/galatea5.jpg" class="img-galatea img-fluid">
+        </div>
+
+        <div class="col-md-6 margen-galatea">
+          <img src="images/galatea3.jpg" class="img-galatea img-fluid">
+        </div>
+        <div class="col-md-6 px-5 margen-galatea">
+          <p class="text-center pregunta-galatea mb-4">Galatea en la literatura</p>
+          <p class="texto-galatea text-start">La figura de Galatea, la nereida de la mitología griega, ha sido una
+            fuente de inspiración para muchos autores a lo largo de la historia. Su historia de amor trágico con Acis y
+            su relación con el cíclope Polifemo han sido un tema recurrente en la literatura. Aquí hay algunos ejemplos
+            de cómo Galatea ha aparecido en la literatura a lo largo de los siglos:<br><br>
+            - Ovidio (43 a.C. - 17/18 d.C.): El poeta romano Ovidio incluye la historia de Galatea, Polifemo y Acis en
+            su obra "Las Metamorfosis." Este poema épico relata las transformaciones y las historias de amor en la
+            mitología clásica. La historia de Galatea y Acis se cuenta en el libro XIII de "Las Metamorfosis".<br><br>
+            - John Dryden (1631-1700): El poeta y dramaturgo inglés John Dryden escribió un poema titulado "Acis and
+            Galatea" en 1712, basado en la historia de amor entre Galatea y Acis. Este poema opera como una adaptación
+            del mito y ha influido en adaptaciones posteriores, incluyendo obras musicales.<br><br>
+            - Geoffrey Chaucer (c. 1343-1400): En "The Canterbury Tales," Chaucer hace referencia a Galatea en su "El
+            Cuento de la Sra. Bath," donde compara la belleza de la esposa del personaje con la de Galatea.<br><br>
+            - John Milton (1608-1674): En su obra "Paraíso Perdido," Milton hace una breve referencia a Galatea al
+            describir la belleza de la naturaleza. Aunque no se centra en la historia de Galatea, la mención es un
+            ejemplo de cómo su figura aparece en la literatura.</p>
+        </div>
+
+        <div class="col-md-6 px-5 margen-galatea">
+          <p class="text-center pregunta-galatea mb-4">Galatea en el arte</p>
+          <p class="texto-galatea text-start">La figura de Galatea ha sido una fuente constante de inspiración en el
+            mundo del arte, tanto en la pintura como en la escultura. A lo largo de la historia, artistas de diferentes
+            épocas y estilos han representado a Galatea en una variedad de contextos y con distintas interpretaciones.
+            Aquí hay algunos ejemplos notables de cómo Galatea ha aparecido en el arte a lo largo de los siglos:<br><br>
+            - "Acis y Galatea" de Jean-Baptiste Lully: Esta ópera barroca francesa, compuesta en 1686 por Jean-Baptiste
+            Lully con libreto de Jean Galbert de Campistron, se basa en la historia de amor entre Galatea y Acis. La
+            ópera ha sido un tema recurrente en el arte operístico y ha inspirado representaciones visuales en pintura y
+            escultura.<br><br>
+            - "Galatea" de Raphael: El renombrado pintor renacentista Raphael creó una serie de frescos en la Villa
+            Farnesina en Roma que representan historias de amor mitológicas, incluyendo una escena con Galatea. En su
+            obra, Galatea aparece en un carro tirado por delfines y rodeada de nereidas, lo que destaca su estatus como
+            ninfa marina.<br><br>
+            - "Galatea de las Esferas" de Salvador Dalí: El famoso pintor surrealista Salvador Dalí creó una obra
+            titulada "Galatea de las Esferas" en 1952. En esta pintura, Galatea es representada como una figura divina
+            en un paisaje surrealista, con esferas que simbolizan el universo. La obra refleja la influencia del mito de
+            Galatea en la obra de Dalí.</p>
+        </div>
+        <div class="col-md-6 margen-galatea">
+          <img src="images/galatea4.jpg" class="img-galatea img-fluid">
         </div>
       </div>
-
-    <div class="fondo py-3">
-        <div class="container text-center">
-            <h1 class="titulo-galatea mt-5">Galatea: La Ninfa Marina</h1>
-            <div class="row mt-5 align-items-center">
-                <div class="col-md-6 px-5 margen-galatea">
-                    <p class="text-center pregunta-galatea mb-4">¿Quién es?</p>
-                    <p class="texto-galatea text-start">Galatea era una de las cincuenta Nereidas, hijas de Nereo, el anciano dios del mar, y su esposa
-                        Doris, quien personificaba la riqueza del mar. Las Nereidas eran consideradas como ninfas
-                        marinas, y cada una de ellas tenía su propia personalidad y atributos distintivos. Galatea se
-                        destacaba por su belleza y gracia, lo que la convertía en una de las nereidas más destacadas en
-                        la mitología griega.</p>
-                </div>
-                <div class="col-md-6 margen-galatea">
-                    <img src="images/galatea1.jpg" class="img-galatea img-fluid">
-                </div>
-
-
-                
-                <div class="col-md-6 margen-galatea">
-                    <img src="images/galatea2.jpg" class="img-galatea img-fluid">
-                </div>
-                <div class="col-md-6 px-5 margen-galatea">
-                    <p class="text-center pregunta-galatea mb-4">¿Cuál es su historia?</p>
-                    <p class="texto-galatea  text-start">Galatea, como se mencionó anteriormente, era una de las Nereidas, ninfas marinas conocidas por su belleza y gracia. Un día, mientras Galatea paseaba por la costa, conoció a Acis, un joven pastor de gran atractivo. Ambos se enamoraron profundamente el uno del otro, y su amor floreció en la costa de Sicilia.
-                        Sin embargo, el problema surgió cuando Polifemo, el cíclope, se enamoró locamente de Galatea. Polifemo, un ser monstruoso con un solo ojo en medio de la frente, comenzó a cortejar a Galatea con gran intensidad. Ella rechazó sus avances, lo que enfureció al cíclope. Polifemo, cegado por los celos y la ira, no podía soportar que Galatea amara a un mortal en lugar de a él.
-                        En su desesperación y rabia, Polifemo arrojó una inmensa roca hacia Acis, el amado de Galatea, mientras este se encontraba en la costa. La roca impactó a Acis y lo mató instantáneamente. Galatea, desconsolada por la pérdida de su amado, no pudo hacer nada para impedir la tragedia.
-                        Para preservar el recuerdo de Acis y permitirle vivir en alguna forma, Galatea lo transformó en un río. El río recibió el nombre de "Río Acis" en su honor y fluyó eternamente, llevando el espíritu de Acis consigo. En este acto, Galatea demostró su inquebrantable amor y su capacidad de otorgar la inmortalidad a su amado de una manera simbólica.</p>
-                </div>
-
-
-                <div class="col-md-6 px-5 margen-galatea">
-                    <p class="text-center pregunta-galatea mb-4">Galatea en la literatura</p>
-                    <p class="texto-galatea text-start">La figura de Galatea, la nereida de la mitología griega, ha sido una fuente de inspiración para muchos autores a lo largo de la historia. Su historia de amor trágico con Acis y su relación con el cíclope Polifemo han sido un tema recurrente en la literatura. Aquí hay algunos ejemplos de cómo Galatea ha aparecido en la literatura a lo largo de los siglos:<br><br>
-                        - Ovidio (43 a.C. - 17/18 d.C.): El poeta romano Ovidio incluye la historia de Galatea, Polifemo y Acis en su obra "Las Metamorfosis." Este poema épico relata las transformaciones y las historias de amor en la mitología clásica. La historia de Galatea y Acis se cuenta en el libro XIII de "Las Metamorfosis".<br><br>
-                        - John Dryden (1631-1700): El poeta y dramaturgo inglés John Dryden escribió un poema titulado "Acis and Galatea" en 1712, basado en la historia de amor entre Galatea y Acis. Este poema opera como una adaptación del mito y ha influido en adaptaciones posteriores, incluyendo obras musicales.<br><br>
-                        - Geoffrey Chaucer (c. 1343-1400): En "The Canterbury Tales," Chaucer hace referencia a Galatea en su "El Cuento de la Sra. Bath," donde compara la belleza de la esposa del personaje con la de Galatea.<br><br>
-                        - John Milton (1608-1674): En su obra "Paraíso Perdido," Milton hace una breve referencia a Galatea al describir la belleza de la naturaleza. Aunque no se centra en la historia de Galatea, la mención es un ejemplo de cómo su figura aparece en la literatura.<br><br>
-                        - William Makepeace Thackeray (1811-1863): El novelista británico Thackeray hace una referencia a Galatea en su obra "Vanity Fair." El personaje principal, Becky Sharp, es comparado con Galatea en términos de belleza y gracia.</p>
-                </div>
-                <div class="col-md-6 margen-galatea">
-                    <img src="images/galatea3.jpg" class="img-galatea img-fluid">
-                </div>
-
-
-                
-                <div class="col-md-6 margen-galatea">
-                    <img src="images/galatea4.jpg" class="img-galatea img-fluid">
-                </div>
-                <div class="col-md-6 px-5 margen-galatea">
-                    <p class="text-center pregunta-galatea mb-4">Galatea en el arte</p>
-                    <p class="texto-galatea text-start">La figura de Galatea ha sido una fuente constante de inspiración en el mundo del arte, tanto en la pintura como en la escultura. A lo largo de la historia, artistas de diferentes épocas y estilos han representado a Galatea en una variedad de contextos y con distintas interpretaciones. Aquí hay algunos ejemplos notables de cómo Galatea ha aparecido en el arte a lo largo de los siglos:<br><br>
-                        - "Acis y Galatea" de Jean-Baptiste Lully: Esta ópera barroca francesa, compuesta en 1686 por Jean-Baptiste Lully con libreto de Jean Galbert de Campistron, se basa en la historia de amor entre Galatea y Acis. La ópera ha sido un tema recurrente en el arte operístico y ha inspirado representaciones visuales en pintura y escultura.<br><br>
-                        - "Galatea" de Raphael: El renombrado pintor renacentista Raphael creó una serie de frescos en la Villa Farnesina en Roma que representan historias de amor mitológicas, incluyendo una escena con Galatea. En su obra, Galatea aparece en un carro tirado por delfines y rodeada de nereidas, lo que destaca su estatus como ninfa marina.<br><br>
-                        - "Galatea de las Esferas" de Salvador Dalí: El famoso pintor surrealista Salvador Dalí creó una obra titulada "Galatea de las Esferas" en 1952. En esta pintura, Galatea es representada como una figura divina en un paisaje surrealista, con esferas que simbolizan el universo. La obra refleja la influencia del mito de Galatea en la obra de Dalí.<br><br>
-                        - "Alegoría de la Vista" de Jan Brueghel el Viejo y Peter Paul Rubens: Esta pintura barroca del siglo XVII muestra a Galatea junto a otras figuras mitológicas. La obra es una representación de la alegoría de la vista y destaca la belleza de Galatea en un contexto mitológico y artístico.</p>
-                </div>
-            </div>
-        </div>
     </div>
+  </div>
 
-    <!--Footer-->
-    <footer class="text-center text-lg-start pt-5">
-        <div class="container text-center">
-            <div class="row">
-                <div class="col-lg-4 mx-auto mb-4">
-                    <!--Enlaces-->
-                    <h5 class="text-uppercase fw-bold mb-4">Enlaces de interés</h5>
-                    <p><a href="https://www.educa.jccm.es/es" class="text-reset">Portal de educación CLM</a></p>
-                    <p><a href="https://educamosclm.castillalamancha.es/" class="text-reset">EducamosCLM</a></p>
-                    <p><a href="https://www.educacionyfp.gob.es/portada.html" class="text-reset">Educación</a></p>
-                </div>
-                <!--Información contacto-->
-                <div class="col-lg-4 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4">Contacto</h5>
-                    <p><i class="fas fa-home"></i> Av Rio Tajo, 2E, 45220 Yeles, Toledo</p>
-                    <p><i class="fas fa-envelope"></i> 45014368.ieso@edu.jccm.es</p>
-                    <p><i class="fas fa-phone"></i> 630 53 70 26 / 616 89 39 82</p>
-                    <h5 class="text-uppercase fw-bold my-4">Redes Sociales</h5>
-                    <a href="https://www.instagram.com/ieso_la_galatea/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
-                        class="text-reset">
-                        <p><i class="fa-brands fa-instagram"></i> ieso_la_galatea</p>
-                    </a>
-                    <a href="https://www.facebook.com/p/IES-YELES-100070083335995" class="text-reset">
-                        <p><i class="fa-brands fa-facebook"></i> IES YELES</p>
-                    </a>
-                </div>
-                <!--Google Maps-->
-                <div class="col-lg-4 mx-auto mb-4">
-                    <h5 class="text-uppercase fw-bold mb-4">Mapa del centro</h5>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7256.013592775873!2d-3.8071389473301656!3d40.124952597004096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f7046560a06d%3A0x6a6f6ffe169dad0f!2sInstituto%20de%20educaci%C3%B3n%20secundaria%20obligatoria%20la%20galatea!5e0!3m2!1ses!2ses!4v1696330840965!5m2!1ses!2ses"
-                        width="auto" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
+  <!--Footer-->
+  <footer class="text-center text-lg-start pt-5">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-lg-4 mx-auto mb-4">
+          <!--Enlaces-->
+          <h5 class="text-uppercase fw-bold mb-4">Enlaces de interés</h5>
+          <p><a href="https://www.educa.jccm.es/es" class="text-reset">Portal de educación CLM</a></p>
+          <p><a href="https://educamosclm.castillalamancha.es/" class="text-reset">EducamosCLM</a></p>
+          <p><a href="https://www.educacionyfp.gob.es/portada.html" class="text-reset">Educación</a></p>
         </div>
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            <p>© 2023 Copyright: <span class="fw-bold">IES La Galatea</span></p>
+        <!--Información contacto-->
+        <div class="col-lg-4 mx-auto mb-4">
+          <h5 class="text-uppercase fw-bold mb-4">Contacto</h5>
+          <p><i class="fas fa-home"></i> Av Rio Tajo, 2E, 45220 Yeles, Toledo</p>
+          <p><i class="fas fa-envelope"></i> 45014368.ieso@edu.jccm.es</p>
+          <p><i class="fas fa-phone"></i> 630 53 70 26 / 616 89 39 82</p>
+          <h5 class="text-uppercase fw-bold my-4">Redes Sociales</h5>
+          <a href="https://www.instagram.com/ieso_la_galatea/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="
+            class="text-reset">
+            <p><i class="fa-brands fa-instagram"></i> ieso_la_galatea</p>
+          </a>
+          <a href="https://www.facebook.com/p/IES-YELES-100070083335995" class="text-reset">
+            <p><i class="fa-brands fa-facebook"></i> IES YELES</p>
+          </a>
         </div>
-    </footer>
+        <!--Google Maps-->
+        <div class="col-lg-4 mx-auto mb-4">
+          <h5 class="text-uppercase fw-bold mb-4">Mapa del centro</h5>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7256.013592775873!2d-3.8071389473301656!3d40.124952597004096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd41f7046560a06d%3A0x6a6f6ffe169dad0f!2sInstituto%20de%20educaci%C3%B3n%20secundaria%20obligatoria%20la%20galatea!5e0!3m2!1ses!2ses!4v1696330840965!5m2!1ses!2ses"
+            width="auto" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      <p>© 2023 Copyright: <span class="fw-bold">IES La Galatea</span></p>
+    </div>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-        crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -6,8 +6,8 @@
 }
 
 .custom-select select {
-    background-color: #ffd700;
-    color: #6b2c80;
+    background-color: #ff99cc;
+    color: #004d40;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -18,26 +18,26 @@
 table {
     border-collapse: collapse;
     width: 100%;
-    background-color: #ffd700;
-    color: #6b2c80;
-    border: 1px solid #6b2c80;
+    background-color: #ff99cc;
+    color: #004d40;
+    border: 1px solid #004d40;
     border-radius: 5px;
 }
 
 th,
 td {
-    border: 1px solid #6b2c80;
+    border: 1px solid #004d40;
     padding-top: 1%;
     padding-bottom: 1%;
     text-align: center;
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #FFF1C0;
+    background-color: #f5e1da;
 }
 
 tbody tr:nth-child(even) {
-    background-color: #FFF8DC;
+    background-color: #fbd3e3;
 }
 
 .tabla-vacio {
