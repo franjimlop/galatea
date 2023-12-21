@@ -1,13 +1,12 @@
 import React from 'react';
 import '../styles/noticias.css';
-import Novedades from '../components/novedades/novedades';
+import ExtraescolaresComponent from '../components/novedades/extraescolares';
 import Paginacion from '../components/novedades/paginacion';
 
 const Extraescolares = () => {
     return (
         <div>
-        <h1 className="text-center mb-0 py-5 fondo">Actividades extraescolares</h1>
-        <Novedades/>
+        <ExtraescolaresComponent/>
         <Paginacion/>
         </div>
     );

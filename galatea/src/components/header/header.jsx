@@ -8,7 +8,7 @@ const Header = () => {
                 <nav className="navbar navbar-expand-xl navbar-light align-content-center">
                     <div className="container-fluid align-content-center">
                         <Link to="/home" className="navbar-brand">
-                            <img src="images/LA_GALATEA_sin_fondo.png" className="foto-logo" alt="Logo" />
+                            <img src={process.env.PUBLIC_URL + '/images/LA_GALATEA_sin_fondo.png'} className="foto-logo" alt="Logo" />
                         </Link>
                         <button
                             className="navbar-toggler centrar-toggler"

@@ -187,8 +187,8 @@ footer a:hover {
 .btn-vermas {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #004d40;
-    color: #f5e1da;
+    background-color: #004d40 !important;
+    color: #f5e1da !important;
     text-decoration: none;
     border-radius: 20px;
     border: 1px solid #004d40;
@@ -208,11 +208,11 @@ footer a:hover {
 .btn-vermas:hover {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff99cc;
-    color: #004d40;
+    background-color: #ff99cc !important;
+    color: #004d40 !important;
     text-decoration: none;
     border-radius: 20px;
-    border: 1px solid #f5e1da;
+    border: 1px solid #004d40;
 }
 
 .btn-vertodas:hover {

@@ -17,11 +17,11 @@ const Galatea = () => {
                             la mitología griega.</p>
                     </div>
                     <div className="col-md-6 margen-galatea">
-                        <img src="images/galatea1.jpg" className="img-galatea img-fluid" alt="Galatea 1" />
+                        <img src={process.env.PUBLIC_URL + '/images/galatea1.jpg'} className="img-galatea img-fluid" alt="Galatea 1" />
                     </div>
 
                     <div className="col-md-6 margen-galatea">
-                        <img src="images/galatea2.jpg" className="img-galatea img-fluid" alt="Galatea 2" />
+                        <img src={process.env.PUBLIC_URL + '/images/galatea2.jpg'} className="img-galatea img-fluid" alt="Galatea 2" />
                     </div>
                     <div className="col-md-6 px-5 margen-galatea">
                         <p className="text-center pregunta-galatea mb-4">¿Cuál es su historia?</p>
@@ -62,11 +62,11 @@ const Galatea = () => {
                             paso en la carrera literaria de Cervantes y sentó las bases para sus obras maestras posteriores.</p>
                     </div>
                     <div className="col-md-6 margen-galatea">
-                        <img src="images/galatea5.jpg" className="img-galatea img-fluid" alt="Galatea 3" />
+                        <img src={process.env.PUBLIC_URL + '/images/galatea5.jpg'} className="img-galatea img-fluid" alt="Galatea 3" />
                     </div>
 
                     <div className="col-md-6 margen-galatea">
-                        <img src="images/galatea3.jpg" className="img-galatea img-fluid" alt="Galatea 4" />
+                        <img src={process.env.PUBLIC_URL + '/images/galatea3.jpg'} className="img-galatea img-fluid" alt="Galatea 4" />
                     </div>
                     <div className="col-md-6 px-5 margen-galatea">
                         <p className="text-center pregunta-galatea mb-4">Galatea en la literatura</p>
@@ -107,7 +107,7 @@ const Galatea = () => {
                             Galatea en la obra de Dalí.</p>
                     </div>
                     <div className="col-md-6 margen-galatea">
-                        <img src="images/galatea4.jpg" className="img-galatea img-fluid" alt="Galatea 5" />
+                        <img src={process.env.PUBLIC_URL + '/images/galatea4.jpg'} className="img-galatea img-fluid" alt="Galatea 5" />
                     </div>
                 </div>
             </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Novedades = () => {
+const Extraescolares = () => {
     return (
         <div className="fondo">
             <div className="container text-center">
-                <h2 className="py-5 color-titulo">Noticias</h2>
+                <h2 className="py-5 color-titulo">Actividades extraescolares</h2>
                 <div className="row pb-3">
                     {/* 4 cards en una línea, por debajo de lg de 2 en 2 */}
                     <div className="col-xl-3 col-md-6 py-3">
@@ -65,4 +65,4 @@ const Novedades = () => {
     );
 };
 
-export default Novedades;
+export default Extraescolares;

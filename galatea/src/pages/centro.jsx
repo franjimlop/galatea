@@ -10,12 +10,7 @@ const Centro = () => {
                 <div className="row pb-5 justify-content-center align-items-center py-5 mx-auto">
                     {/* Directora */}
                     <div className="col-md-4 text-center text-md-end px-5 pb-3">
-                        <img
-                            src="images/directora.png"
-                            style={{ maxHeight: '7rem' }}
-                            className="img-fluid rounded-circle directora-imagen mb-3"
-                            alt="Directora"
-                        />
+                        <img src={process.env.PUBLIC_URL + '/images/directora.png'} style={{ maxHeight: '7rem' }} className="img-fluid rounded-circle directora-imagen mb-3" alt="Directora" />
                     </div>
                     <div className="col-md-8 text-center text-md-start px-5 pb-3">
                         <h2 className="directora-nombre">Mª José Villarrubia Lázaro (Directora)</h2>
@@ -23,12 +18,7 @@ const Centro = () => {
 
                     {/* Secretaria */}
                     <div className="col-md-4 text-center text-md-end px-5 pb-3">
-                        <img
-                            src="images/directora.png"
-                            style={{ maxHeight: '7rem' }}
-                            className="img-fluid rounded-circle directora-imagen mb-3"
-                            alt="Secretaria"
-                        />
+                        <img src={process.env.PUBLIC_URL + '/images/directora.png'} style={{ maxHeight: '7rem' }} className="img-fluid rounded-circle directora-imagen mb-3" alt="Directora" />
                     </div>
                     <div className="col-md-8 text-center text-md-start px-5 pb-3">
                         <h2 className="directora-nombre">Ana de la Torre Molina (Secretaria)</h2>
@@ -36,12 +26,7 @@ const Centro = () => {
 
                     {/* Jefe de estudios */}
                     <div className="col-md-4 text-center text-md-end px-5 pb-3">
-                        <img
-                            src="images/directora.png"
-                            style={{ maxHeight: '7rem' }}
-                            className="img-fluid rounded-circle directora-imagen mb-3"
-                            alt="Jefe de estudios"
-                        />
+                        <img src={process.env.PUBLIC_URL + '/images/directora.png'} style={{ maxHeight: '7rem' }} className="img-fluid rounded-circle directora-imagen mb-3" alt="Directora" />
                     </div>
                     <div className="col-md-8 text-center text-md-start px-5 pb-3">
                         <h2 className="directora-nombre">Javier Muñoz Olmo (Jefe de estudios)</h2>
@@ -49,12 +34,7 @@ const Centro = () => {
 
                     {/* Jefa de estudios adjunta */}
                     <div className="col-md-4 text-center text-md-end px-5 pb-3">
-                        <img
-                            src="images/directora.png"
-                            style={{ maxHeight: '7rem' }}
-                            className="img-fluid rounded-circle directora-imagen mb-3"
-                            alt="Jefa de estudios adjunta"
-                        />
+                        <img src={process.env.PUBLIC_URL + '/images/directora.png'} style={{ maxHeight: '7rem' }} className="img-fluid rounded-circle directora-imagen mb-3" alt="Directora" />
                     </div>
                     <div className="col-md-8 text-center text-md-start px-5 pb-3">
                         <h2 className="directora-nombre">Aranzazu Dopico Puerto (Jefa de estudios adjunta)</h2>
@@ -78,15 +58,15 @@ const Centro = () => {
                         <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
                             <div className="carousel-inner">
                                 <div className="carousel-item active">
-                                    <img src="images/instituto.jpeg" className="img-fluid img-instalaciones" alt="Pistas Deportivas" />
+                                    <img src={process.env.PUBLIC_URL + '/images/instituto.jpeg'} className="img-fluid img-instalaciones" alt="Pistas Deportivas" />
                                     <p className="pt-3">Pistas Deportivas</p>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="images/musica.jpg" className="img-fluid img-instalaciones" alt="Aula de música" />
+                                    <img src={process.env.PUBLIC_URL + '/images/musica.jpg'} className="img-fluid img-instalaciones" alt="Aula de música" />
                                     <p className="pt-3">Aula de música</p>
                                 </div>
                                 <div className="carousel-item">
-                                    <img src="images/laboratorio.jpg" className="img-fluid img-instalaciones" alt="Laboratorio" />
+                                    <img src={process.env.PUBLIC_URL + '/images/laboratorio.jpg'} className="img-fluid img-instalaciones" alt="Laboratorio" />
                                     <p className="pt-3">Laboratorio</p>
                                 </div>
                             </div>
