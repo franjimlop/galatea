@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/galatea/static/css/main.1f41bd08.css",
+    "main.css": "/galatea/static/css/main.99ad22ab.css",
     "main.js": "/galatea/static/js/main.79534cc7.js",
     "static/media/LA_GALATEA_grande.png": "/galatea/static/media/LA_GALATEA_grande.211dbb9aa72070d28600.png",
     "index.html": "/galatea/index.html",
-    "main.1f41bd08.css.map": "/galatea/static/css/main.1f41bd08.css.map",
+    "main.99ad22ab.css.map": "/galatea/static/css/main.99ad22ab.css.map",
     "main.79534cc7.js.map": "/galatea/static/js/main.79534cc7.js.map"
   },
   "entrypoints": [
-    "static/css/main.1f41bd08.css",
+    "static/css/main.99ad22ab.css",
     "static/js/main.79534cc7.js"
   ]
 }
