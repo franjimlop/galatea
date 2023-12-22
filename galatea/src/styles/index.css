@@ -392,8 +392,9 @@ dialog {
 
 @media (max-width: 1200px) {
     .carousel-caption {
-        bottom: 25%;
-        margin-bottom: auto;
+        top: 20%;
+        bottom: 20%;
+        margin: auto;
         left: 50%;
         transform: translate(-50%, 0);
     }
@@ -401,8 +402,9 @@ dialog {
 
 @media (max-width: 768px) {
     .carousel-caption {
+        top: 15%;
         bottom: 15%;
-        margin-bottom: auto;
+        margin: auto;
         width: 50%;
         font-size: 0.3vh !important;
     }
