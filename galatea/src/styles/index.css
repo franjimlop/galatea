@@ -355,13 +355,13 @@ dialog {
 
 @media (max-width: 1200px) {
     .img-instalaciones {
-        height: 325px;
+        height: 325px !important;
     }
 }
 
 @media (max-width: 768px) {
     .img-instalaciones {
-        height: 200px;
+        height: 200px !important;
     }
 }
 
@@ -397,13 +397,14 @@ dialog {
         margin: auto;
         left: 50%;
         transform: translate(-50%, 0);
+        font-size: 0.5vh !important;
     }
 }
 
 @media (max-width: 768px) {
     .carousel-caption {
         top: 15%;
-        bottom: 15%;
+        bottom: 10%;
         margin: auto;
         width: 50%;
         font-size: 0.3vh !important;
