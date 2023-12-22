@@ -2,7 +2,7 @@ import React from 'react';
 
 const Carousel = () => {
     return (
-        <div className="text-center">
+        <div className="text-center fondo">
             <div id="carouselExample" className="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
                 <div className="carousel-inner">
                     <div className="carousel-item active">

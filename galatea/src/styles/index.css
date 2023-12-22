@@ -393,7 +393,7 @@ dialog {
 @media (max-width: 1200px) {
     .carousel-caption {
         bottom: 25%;
-        /* O cualquier otro valor que funcione mejor */
+        margin-bottom: auto;
         left: 50%;
         transform: translate(-50%, 0);
     }
@@ -402,8 +402,9 @@ dialog {
 @media (max-width: 768px) {
     .carousel-caption {
         bottom: 15%;
+        margin-bottom: auto;
         width: 50%;
-        font-size: 0.5vh !important;
+        font-size: 0.3vh !important;
     }
 }
 

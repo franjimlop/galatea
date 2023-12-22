@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/noticias.css';
-import Novedades from '../components/novedades/extraescolares';
+import Novedades from '../components/novedades/novedades';
 import Paginacion from '../components/novedades/paginacion';
 
 const Noticias = () => {
