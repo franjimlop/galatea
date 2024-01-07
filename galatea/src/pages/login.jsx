@@ -13,14 +13,12 @@ const Login = () => {
                     <label htmlFor="contrasena">Contraseña:</label>
                     <input type="password" id="contrasena" name="contrasena" required />
                     <div className="div pt-4">
-                        <input type="submit" value="Iniciar Sesión" />
+                        <Link to="/homeUsuario">
+                            <input type="submit" value="Iniciar Sesión" />
+                        </Link>
+
                     </div>
                 </form>
-            </div>
-            <div className="div pt-4">
-                <Link to="/home">
-                    <button className="btn-vermas">Volver</button>
-                </Link>
             </div>
         </div>
     );
