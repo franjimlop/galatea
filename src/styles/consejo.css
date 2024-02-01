@@ -1,0 +1,18 @@
+.texto-consejo {
+    font-size: 2vh;
+}
+
+.negrita-texto {
+    font-weight: bold;
+}
+
+.consejo-ul {
+    list-style-type: disc;
+    padding: auto;
+    margin: 0;
+    font-size: 2vh;
+}
+
+.consejo-li {
+    margin: 5px 0;
+}

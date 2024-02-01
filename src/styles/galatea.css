@@ -1,0 +1,20 @@
+.titulo-galatea {
+    font-size: 8vh;
+}
+
+.pregunta-galatea {
+    font-size: 4vh
+}
+
+.texto-galatea {
+    font-size: 2vh;
+}
+
+.img-galatea {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.margen-galatea {
+    margin-top: 10%;
+}

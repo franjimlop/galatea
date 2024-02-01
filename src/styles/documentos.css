@@ -1,0 +1,22 @@
+.documentos-ul {
+  list-style-type: disc;
+  padding: 0;
+  margin: 0;
+  font-size: 2vh;
+}
+
+/* Estilo para los elementos de lista */
+.documentos-li {
+  margin: 5px 0;
+}
+
+/* Estilo para los enlaces */
+.documentos-li a {
+  text-decoration: underline;
+  color: #f5e1da;
+  font-weight: bold;
+}
+
+.documentos-li a:hover {
+  color: #ff99cc;
+}

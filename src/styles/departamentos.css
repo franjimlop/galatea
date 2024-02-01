@@ -1,0 +1,17 @@
+.borde-departamento {
+    border: 1px solid #ff99cc;
+    border-radius: 10px;
+    width: auto;
+    background-color: #f5e1da;
+    color: #004d40;
+}
+
+@media (max-width: 992px) {
+  .borde-departamento {
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+  h2 {
+    margin-top: 5%;
+  }
+}
