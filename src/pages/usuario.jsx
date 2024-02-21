@@ -7,6 +7,8 @@ const Usuario = () => {
     const [confirmarContrasena, setConfirmarContrasena] = useState('');
     const [usuarios, setUsuarios] = useState([]);
     const [usuarioSeleccionado, setUsuarioSeleccionado] = useState('');
+    const [nombreError, setNombreError] = useState('');
+    const [contrasenaError, setContrasenaError] = useState('');
 
     useEffect(() => {
         // Lógica para obtener la lista de usuarios (puedes hacer una solicitud al backend aquí)
@@ -26,14 +28,30 @@ const Usuario = () => {
         };
 
         obtenerUsuarios();
-    }, []); // Se ejecuta solo una vez al cargar el componente
+    }, []);
 
     const handleNombreUsuarioChange = (e) => {
-        setNombreUsuario(e.target.value);
+        const value = e.target.value;
+        setNombreUsuario(value);
+
+        // Restricciones de longitud para el nombre de usuario
+        if (value.length < 6) {
+            setNombreError('El nombre de usuario debe tener al menos 6 caracteres');
+        } else {
+            setNombreError('');
+        }
     };
 
     const handleContrasenaChange = (e) => {
-        setContrasena(e.target.value);
+        const value = e.target.value;
+        setContrasena(value);
+
+        // Restricciones de longitud para la contraseña
+        if (value.length < 8) {
+            setContrasenaError('La contraseña debe tener al menos 8 caracteres');
+        } else {
+            setContrasenaError('');
+        }
     };
 
     const handleConfirmarContrasenaChange = (e) => {
@@ -52,6 +70,17 @@ const Usuario = () => {
             return;
         }
 
+        // Restricciones de longitud para el nombre de usuario y la contraseña
+        if (nombreUsuario.length < 6) {
+            alert('El nombre de usuario debe tener al menos 6 caracteres');
+            return;
+        }
+
+        if (contrasena.length < 8) {
+            alert('La contraseña debe tener al menos 8 caracteres');
+            return;
+        }
+
         try {
             const response = await fetch('http://localhost:5000/usuarios', {
                 method: 'POST',
@@ -66,8 +95,12 @@ const Usuario = () => {
 
             if (response.ok) {
                 alert('Usuario creado exitosamente');
-                // Actualizar la lista de usuarios después de crear uno nuevo
-                // Puedes realizar alguna acción adicional si es necesario
+
+                // Borrar los campos después de crear un usuario
+                setNombreUsuario('');
+                setContrasena('');
+                setConfirmarContrasena('');
+                window.location.reload();
             } else {
                 alert('Error al crear usuario');
             }
@@ -92,13 +125,14 @@ const Usuario = () => {
 
             if (response.ok) {
                 alert('Usuario borrado exitosamente');
-                // Actualizar la lista de usuarios después de borrar uno
-                // Puedes realizar alguna acción adicional si es necesario
+                window.location.reload();
             } else {
-                alert('Error al borrar usuario');
+                const data = await response.json();
+                alert(`Error al borrar usuario: ${data.error}`);
             }
         } catch (error) {
             console.error('Error al enviar solicitud de borrado al backend:', error);
+            alert('Error al conectar con el servidor');
         }
     };
 
@@ -108,14 +142,37 @@ const Usuario = () => {
                 <div className="login-container">
                     <h2 className="pb-3">Crear Usuario</h2>
                     <form action="#" method="post" onSubmit={handleCrearUsuarioSubmit}>
-                        <label htmlFor="usuario">Nombre Usuario (mínimo 8 caracteres):</label>
-                        <input type="text" id="usuario" name="usuario" value={nombreUsuario} onChange={handleNombreUsuarioChange} required />
+                        <label htmlFor="usuario">Nombre Usuario (mínimo 6 caracteres):</label>
+                        <input
+                            type="text"
+                            id="usuario"
+                            name="usuario"
+                            value={nombreUsuario}
+                            onChange={handleNombreUsuarioChange}
+                            required
+                        />
+                        {nombreError && <p className="error-message red">{nombreError}</p>}
 
                         <label htmlFor="contrasena">Contraseña (mínimo 8 caracteres):</label>
-                        <input type="password" id="contrasena" name="contrasena" value={contrasena} onChange={handleContrasenaChange} required />
+                        <input
+                            type="password"
+                            id="contrasena"
+                            name="contrasena"
+                            value={contrasena}
+                            onChange={handleContrasenaChange}
+                            required
+                        />
+                        {contrasenaError && <p className="error-message red">{contrasenaError}</p>}
 
                         <label htmlFor="confirmarContrasena">Confirmar Contraseña:</label>
-                        <input type="password" id="confirmarContrasena" name="contrasena" value={confirmarContrasena} onChange={handleConfirmarContrasenaChange} required />
+                        <input
+                            type="password"
+                            id="confirmarContrasena"
+                            name="confirmarContrasena"
+                            value={confirmarContrasena}
+                            onChange={handleConfirmarContrasenaChange}
+                            required
+                        />
 
                         <div className="div pt-4">
                             <input type="submit" value="Crear Usuario" />
@@ -128,7 +185,12 @@ const Usuario = () => {
                     <h2 className="pb-3">Borrar Usuario</h2>
                     <form action="#" method="post" onSubmit={handleBorrarUsuarioSubmit}>
                         <label htmlFor="selectUsuario">Selecciona el usuario:</label>
-                        <select name="selectUsuario" id="selectUsuario" value={usuarioSeleccionado} onChange={handleUsuarioSeleccionadoChange}>
+                        <select
+                            name="selectUsuario"
+                            id="selectUsuario"
+                            value={usuarioSeleccionado}
+                            onChange={handleUsuarioSeleccionadoChange}
+                        >
                             <option value="">Selecciona un usuario</option>
                             {usuarios.map((usuario) => (
                                 <option key={usuario.id} value={usuario.id}>

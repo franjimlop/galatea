@@ -67,12 +67,6 @@ select {
     border-radius: 4px;
 }
 
-p.error-feedback {
+.red {
     color: red;
-    font-size: small;
-    margin: 0;
-}
-
-.error>input {
-    border-color: red;
-}
+  }

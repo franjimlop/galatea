@@ -1,7 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Headerlogin = () => {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        // Eliminar el token del almacenamiento local
+        localStorage.removeItem('token');
+
+        // Redirigir al usuario a la página de inicio de sesión
+        navigate('/login');
+        window.location.reload();
+    };
+
     return (
         <div className="navega">
             <div className="container">
@@ -23,11 +34,6 @@ const Headerlogin = () => {
                         </button>
                         <div className="collapse navbar-collapse letra-menu" id="navbarTogglerDemo02">
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-                                <li className="nav-item px-2">
-                                    <Link to="/home" className="nav-link efecto-menu">
-                                        Inicio
-                                    </Link>
-                                </li>
                                 <li className="nav-item dropdown px-2">
                                     <a class="nav-link dropdown-toggle efecto-menu" id="navbarScrollingDropdown" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -262,7 +268,7 @@ const Headerlogin = () => {
 
                                 <div className="row justify-content-center align-content-center">
                                     <div className="col-auto">
-                                        <li className="nav-item px-2">
+                                        <li className="nav-item px-2" onClick={handleLogout}>
                                             <Link to="/home" className="nav-link">
                                                 <i className="fa-solid fa-sign-out"></i>
                                             </Link>

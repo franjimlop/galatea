@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/consejo.css';
 
 const Consejo = () => {
+    const [miembrosConsejo, setMiembrosConsejo] = useState([]);
+
+    useEffect(() => {
+        // Obtener los miembros del Consejo desde el backend
+        fetch('http://localhost:5000/consejo')
+            .then(response => response.json())
+            .then(data => setMiembrosConsejo(data))
+            .catch(error => console.error('Error al obtener miembros del Consejo:', error));
+    }, []);
+
     return (
         <div className="fondo">
             <div className="container pb-3">
@@ -17,12 +27,12 @@ const Consejo = () => {
                     <span className="negrita-texto">- Atención a las necesidades y desafíos locales:</span> El Consejo Escolar permite que la comunidad educativa aborde de manera efectiva los desafíos y las necesidades específicas de la institución y su entorno, adaptando las políticas y decisiones a la realidad local.<br /><br />
                     <span className="negrita-texto">El Consejo Escolar está formado actualmente por:</span><br /><br />
                 </p>
+
+                {/* Lista de miembros del Consejo basada en el estado */}
                 <ul className="consejo-ul">
-                    <li className="consejo-li">Nombre y apellidos (Equipo Directivo)</li>
-                    <li className="consejo-li">Nombre y apellidos (Profesorado)</li>
-                    <li className="consejo-li">Nombre y apellidos (Alumnado)</li>
-                    <li className="consejo-li">Nombre y apellidos (Madres / Padres)</li>
-                    <li className="consejo-li">Nombre y apellidos (Ayuntamiento)</li>
+                    {miembrosConsejo.map((miembro) => (
+                        <li key={miembro.id} className="consejo-li">{miembro.nombre}</li>
+                    ))}
                 </ul>
             </div>
         </div>

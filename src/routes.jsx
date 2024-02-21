@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import Carousel from './components/carousel/carousel';
 import Novedades from './components/novedades/novedades';
 import BotonTodasNoticias from './components/novedades/botonTodasNoticias';
+import HeaderLogin from './components/header/headerLogin';
 
 // Importa los componentes de las páginas
 import Usuario from './pages/usuario';
