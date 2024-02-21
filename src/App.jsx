@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App fondo">
-      {isAuthenticated ? <HeaderLogin /> : <Header />}
+      {isAuthenticated ? <HeaderLogin /> : <HeaderLogin />}
       <Routes />
       <Footer />
     </div>
