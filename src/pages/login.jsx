@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Cambio de useHistory a useNavigate
 import '../styles/login.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const [usuario, setUsuario] = useState('');
@@ -30,12 +32,31 @@ const Login = () => {
                 localStorage.setItem('token', token);
 
                 // Redirigir a la página "/home"
+                toast.success('Sesión iniciada exitosamente', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
                 navigate('/home');
                 window.location.reload();
             } else {
                 const errorData = await response.json();
                 setError(errorData.error);
-                alert('Error al iniciar sesión');
+                toast.error('Error al iniciar sesión', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
             }
         } catch (error) {
             console.error('Error al enviar datos al backend:', error);
@@ -45,6 +66,7 @@ const Login = () => {
 
     return (
         <div className="py-5">
+        <ToastContainer />
             <div className="login-container">
                 <h2 className="pb-3">Iniciar Sesión</h2>
                 <form action="#" method="post" onSubmit={handleLoginSubmit}>

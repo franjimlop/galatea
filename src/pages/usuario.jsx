@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../styles/login.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import bcrypt from 'bcryptjs';
 
 const Usuario = () => {
     const [nombreUsuario, setNombreUsuario] = useState('');
@@ -94,6 +95,9 @@ const Usuario = () => {
         }
 
         try {
+            // Cifra la contraseña antes de enviarla al backend
+            const hashedPassword = await bcrypt.hash(contrasena, 10);
+
             const response = await fetch('http://localhost:5000/usuarios', {
                 method: 'POST',
                 headers: {
@@ -101,7 +105,7 @@ const Usuario = () => {
                 },
                 body: JSON.stringify({
                     nombre: nombreUsuario,
-                    password: contrasena,
+                    password: hashedPassword, // Envia la contraseña cifrada
                 }),
             });
 

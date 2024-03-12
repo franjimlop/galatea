@@ -193,8 +193,10 @@ const GestionActividades = () => {
             const files = Array.from(archivosAdjuntos);
 
             files.forEach((archivo) => {
+                const nombreArchivo = archivo.name;
+                formData.append('nombres[]', nombreArchivo); // Agregar el nombre del archivo al FormData como un array
                 formData.append('archivos', archivo);
-            });
+            }); 
 
             const response = await fetch('http://localhost:5000/adjuntos', {
                 method: 'POST',
@@ -325,7 +327,7 @@ const GestionActividades = () => {
                         </select>
 
                         <label htmlFor="archivos">Adjuntar archivos:</label>
-                        <input type="file" id="archivos" name="archivos" accept="image/*, .pdf" multiple onChange={(e) => setArchivosAdjuntos(e.target.files)}/>
+                        <input type="file" id="archivos" name="archivos" accept=".pdf" multiple onChange={(e) => setArchivosAdjuntos(e.target.files)}/>
                         
                         <div className="div pt-4">
                             <input type="submit" value="Agregar archivos adjuntos" />

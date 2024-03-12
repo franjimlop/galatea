@@ -695,9 +695,14 @@ app.delete('/noticias/:id', (req, res) => {
   });
 });
 
-// Endpoint para obtener los archivos adjuntos
+// Endpoint para obtener los archivos adjuntos de una noticia específica
 app.get('/adjuntos', (req, res) => {
-  connection.query('SELECT * FROM adjunto', (error, results) => {
+  const { id_noticia } = req.query;
+  if (!id_noticia) {
+    return res.status(400).json({ error: 'ID de noticia no proporcionado' });
+  }
+
+  connection.query('SELECT * FROM adjunto WHERE id_noticia = ?', id_noticia, (error, results) => {
     if (error) {
       console.error('Error al ejecutar la consulta:', error);
       res.status(500).json({ error: 'Error al obtener los archivos adjuntos' });
@@ -705,20 +710,25 @@ app.get('/adjuntos', (req, res) => {
       const adjuntoConBase64 = results.map((adjunto) => ({
         id: adjunto.id,
         id_noticia: adjunto.id_noticia,
-        archvio: adjunto.archivo.toString('base64'),
+        nombre: adjunto.nombre,
+        archivo: adjunto.archivo.toString('base64'),
       }));
       res.json(adjuntoConBase64);
     }
   });
 });
 
+
 // Endpoint para crear nuevos archivos adjuntos
 app.post('/adjuntos', upload.array('archivos'), (req, res) => {
-  const { id_noticia } = req.body;
-  const archivos = req.files.map(file => file.buffer); // Obtener el buffer de cada archivo adjunto
+  const { id_noticia, nombres } = req.body; // Obtener los nombres de los archivos
+  const archivos = req.files.map((file, index) => ({
+    nombre: nombres[index], // Asignar el nombre correspondiente al archivo
+    archivo: file.buffer
+  }));
 
-  const insertQuery = 'INSERT INTO adjunto (id_noticia, archivo) VALUES ?';
-  const values = archivos.map(archivo => [id_noticia, archivo]);
+  const insertQuery = 'INSERT INTO adjunto (id_noticia, nombre, archivo) VALUES ?';
+  const values = archivos.map(archivo => [id_noticia, archivo.nombre, archivo.archivo]);
 
   connection.query(insertQuery, [values], (error, results) => {
     if (error) {

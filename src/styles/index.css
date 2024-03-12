@@ -237,18 +237,35 @@ footer a:hover {
     border-bottom: 1px solid #004d40;
 }
 
+.card-title-container {
+    height: 5rem !important;
+    /* Ajusta esta altura según tus necesidades */
+    overflow: hidden;
+}
+
 .card-title {
-    height: 2rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 576px) {
+    .titulo-despliegue {
+        /* Tamaño de fuente para dispositivos pequeños */
+        font-size: 2rem;
+    }
 }
 
 /*Retoque para que en los card-text aparezca como mucho tres lineas y lo demás se oculte y los ver mas estén a la misma altura todos*/
 .card-text {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     /* Establece el número máximo de líneas a mostrar */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
 
 /*El color que esté activo aparece marcado para ayudar visualmente a que no den al mismo en el que están*/
 .dropdown-item.active {

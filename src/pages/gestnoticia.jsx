@@ -193,8 +193,10 @@ const GestionNoticias = () => {
             const files = Array.from(archivosAdjuntos);
 
             files.forEach((archivo) => {
+                const nombreArchivo = archivo.name;
+                formData.append('nombres[]', nombreArchivo); // Agregar el nombre del archivo al FormData como un array
                 formData.append('archivos', archivo);
-            });
+            });            
 
             const response = await fetch('http://localhost:5000/adjuntos', {
                 method: 'POST',
@@ -284,19 +286,19 @@ const GestionNoticias = () => {
 
     return (
         <div>
-        <ToastContainer/>
+            <ToastContainer />
             <div className="py-5">
                 <div className="login-container">
                     <h2 className="pb-3">Agregar Noticia</h2>
                     <form encType="multipart/form-data" onSubmit={handleCrearNoticiaSubmit}>
                         <label htmlFor="nombre">Título de la noticia:</label>
-                        <input type="text" id="nombre" name="nombre" value={nombre} onChange={handleNombreChange}/>
+                        <input type="text" id="nombre" name="nombre" value={nombre} onChange={handleNombreChange} />
                         {nombreError && <p className="error-message red">{nombreError}</p>}
-                        
+
                         <label htmlFor="texto">Texto de la noticia:</label>
-                        <textarea type="text" id="texto" name="texto" value={texto} onChange={handleTextoChange} style={{ height: '20vh', width: '100%', resize: 'none' }}/>
+                        <textarea type="text" id="texto" name="texto" value={texto} onChange={handleTextoChange} style={{ height: '20vh', width: '100%', resize: 'none' }} />
                         {textoError && <p className="error-message red">{textoError}</p>}
-                        
+
                         <label htmlFor="categoria">Seleccionar Categoría Noticia:</label>
                         <select name="categoria" id="categoria" value={categoria} onChange={handleCategoriaChange}>
                             <option value="" disabled hidden>Selecciona una categoría</option>
@@ -312,8 +314,8 @@ const GestionNoticias = () => {
                         </select>
 
                         <label htmlFor="usuario">Escoger imagen (Tamaño recomendado 1920x1080 / Máximo 2MB):</label>
-                        <input type="file" id="imagen" name="imagen" accept="image/*" onChange={handleFotoChange}/>
-                        
+                        <input type="file" id="imagen" name="imagen" accept="image/*" onChange={handleFotoChange} />
+
                         <div className="div pt-4">
                             <input type="submit" value="Crear Noticia" />
                         </div>
@@ -333,8 +335,8 @@ const GestionNoticias = () => {
                         </select>
 
                         <label htmlFor="archivos">Adjuntar archivos:</label>
-                        <input type="file" id="archivos" name="archivos" accept="image/*, .pdf" multiple onChange={(e) => setArchivosAdjuntos(e.target.files)}/>
-                        
+                        <input type="file" id="archivos" name="archivos" accept=".pdf" multiple onChange={(e) => setArchivosAdjuntos(e.target.files)} />
+
                         <div className="div pt-4">
                             <input type="submit" value="Agregar archivos adjuntos" />
                         </div>
