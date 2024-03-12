@@ -5,7 +5,7 @@ import '../styles/login.css';
 const Login = () => {
     const [usuario, setUsuario] = useState('');
     const [contrasena, setContrasena] = useState('');
-    const [error, setError] = useState('');
+    const [error, setError] = useState(''); 
 
     // Obtener la función de navegación
     const navigate = useNavigate(); // Cambio de useHistory a useNavigate

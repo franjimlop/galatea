@@ -6,7 +6,6 @@ const Centro = () => {
     const [instalaciones, setInstalaciones] = useState([]);
 
     useEffect(() => {
-        // Lógica para obtener la lista de miembros del equipo directivo
         const obtenerEquipoDirectivo = async () => {
             try {
                 const response = await fetch('http://localhost:5000/equipodirectivo');
@@ -21,7 +20,6 @@ const Centro = () => {
             }
         };
 
-        // Lógica para obtener la lista de instalaciones
         const obtenerInstalaciones = async () => {
             try {
                 const response = await fetch('http://localhost:5000/instalaciones');

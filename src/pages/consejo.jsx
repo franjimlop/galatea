@@ -25,13 +25,13 @@ const Consejo = () => {
                     <span className="negrita-texto">- Promoción de un entorno de aprendizaje favorable:</span> La colaboración en la definición de normas de convivencia y disciplina escolar ayuda a mantener un entorno de aprendizaje seguro y respetuoso, lo que beneficia a todos los miembros de la comunidad educativa.<br /><br />
                     <span className="negrita-texto">- Uso responsable de los recursos:</span> Al participar en la gestión de los recursos económicos asignados al centro, el Consejo Escolar contribuye a garantizar que los recursos se utilicen de manera eficiente y en beneficio de los estudiantes y la comunidad escolar en general.<br /><br />
                     <span className="negrita-texto">- Atención a las necesidades y desafíos locales:</span> El Consejo Escolar permite que la comunidad educativa aborde de manera efectiva los desafíos y las necesidades específicas de la institución y su entorno, adaptando las políticas y decisiones a la realidad local.<br /><br />
-                    <span className="negrita-texto">El Consejo Escolar está formado actualmente por:</span><br /><br />
+                    <span className="negrita-texto">El Consejo Escolar está formado actualmente por:</span><br />
                 </p>
 
                 {/* Lista de miembros del Consejo basada en el estado */}
                 <ul className="consejo-ul">
                     {miembrosConsejo.map((miembro) => (
-                        <li key={miembro.id} className="consejo-li">{miembro.nombre}</li>
+                        <li key={miembro.id} className="consejo-li">{miembro.nombre} ({miembro.origen})</li>
                     ))}
                 </ul>
             </div>

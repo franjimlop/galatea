@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/login.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ImgCarrusel = () => {
     const [nombreImagen, setNombreImagen] = useState('');
@@ -7,26 +9,34 @@ const ImgCarrusel = () => {
     const [imagenes, setImagenes] = useState([]);
     const [imagenSeleccionada, setImagenSeleccionada] = useState('');
 
-    useEffect(() => {
-        const obtenerImagenes = async () => {
-            try {
-                const response = await fetch('http://localhost:5000/imagenes');
-                if (response.ok) {
-                    const data = await response.json();
-                    setImagenes(data);
-                } else {
-                    console.error('Error al obtener la lista de imágenes');
-                }
-            } catch (error) {
-                console.error('Error al obtener la lista de imágenes:', error);
-            }
-        };
+    const [nombreError, setNombreError] = useState('');
 
+    const obtenerImagenes = async () => {
+        try {
+            const response = await fetch('http://localhost:5000/imagenes');
+            if (response.ok) {
+                const data = await response.json();
+                setImagenes(data);
+            } else {
+                console.error('Error al obtener la lista de imágenes');
+            }
+        } catch (error) {
+            console.error('Error al obtener la lista de imágenes:', error);
+        }
+    };
+    useEffect(() => {
         obtenerImagenes();
     }, []);
 
     const handleNombreImagenChange = (e) => {
-        setNombreImagen(e.target.value);
+        const value = e.target.value;
+        setNombreImagen(value);
+
+        if (value.length < 4) {
+            setNombreError('El nombre de la imagen debe tener al menos 4 caracteres');
+        } else {
+            setNombreError('');
+        }
     };
 
     const handleImagenChange = (e) => {
@@ -35,7 +45,16 @@ const ImgCarrusel = () => {
         // Validar tamaño de la imagen
         const maxSize = 2 * 1024 * 1024; // 2MB
         if (selectedImage && selectedImage.size > maxSize) {
-            alert('La imagen seleccionada supera el tamaño máximo de 2MB');
+            toast.error('La imagen seleccionada supera el tamaño máximo de 2MB', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
             e.target.value = null; // Limpiar el input de archivo
         } else {
             setImagen(selectedImage);
@@ -49,8 +68,17 @@ const ImgCarrusel = () => {
     const handleSubirImagenSubmit = async (e) => {
         e.preventDefault();
 
-        if (!nombreImagen || !imagen) {
-            alert('Por favor, completa todos los campos');
+        if (!nombreImagen || !imagen || nombreImagen.length < 4) {
+            toast.info('Por favor, completa todos los campos', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
             return;
         }
 
@@ -65,14 +93,30 @@ const ImgCarrusel = () => {
             });
 
             if (response.ok) {
-                alert('Imagen subida exitosamente');
-
-                // Borrar los campos después de subir una imagen
                 setNombreImagen('');
                 setImagen(null);
-                window.location.reload();
+                toast.success('Imagen creada exitosamente', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                obtenerImagenes();
             } else {
-                alert('Error al subir la imagen');
+                toast.error('Error al subir la imagen', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
             }
         } catch (error) {
             console.error('Error al enviar datos al backend:', error);
@@ -83,7 +127,16 @@ const ImgCarrusel = () => {
         e.preventDefault();
 
         if (!imagenSeleccionada) {
-            alert('Por favor, selecciona una imagen para borrar');
+            toast.info('Por favor, selecciona una imagen para poder borrarla', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
             return;
         }
 
@@ -93,43 +146,47 @@ const ImgCarrusel = () => {
             });
 
             if (response.ok) {
-                alert('Imagen borrada exitosamente');
-                window.location.reload();
+                toast.success('Imagen borrada exitosamente', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                obtenerImagenes();
             } else {
-                const data = await response.json();
-                alert(`Error al borrar imagen: ${data.error}`);
+                toast.error('Fallo al borrar la imagen', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
             }
         } catch (error) {
             console.error('Error al enviar solicitud de borrado al backend:', error);
-            alert('Error al conectar con el servidor');
         }
     };
 
     return (
         <div>
+            <ToastContainer/>
             <div className="py-5">
                 <div className="login-container">
                     <h2 className="pb-3">Crear Imagen</h2>
-                    <form action="#" method="post" encType="multipart/form-data" onSubmit={handleSubirImagenSubmit}>
+                    <form encType="multipart/form-data" onSubmit={handleSubirImagenSubmit}>
                         <label htmlFor="nombreImagen">Nombre de la imagen:</label>
-                        <input
-                            type="text"
-                            id="nombreImagen"
-                            name="nombreImagen"
-                            value={nombreImagen}
-                            onChange={handleNombreImagenChange}
-                            required
-                        />
+                        <input type="text" id="nombreImagen" name="nombreImagen" value={nombreImagen} onChange={handleNombreImagenChange}/>
+                        {nombreError && <p className="error-message red">{nombreError}</p>}
 
                         <label htmlFor="imagen">Escoger imagen (Tamaño recomendado 1920x1080 / Máximo 2MB):</label>
-                        <input
-                            type="file"
-                            id="imagen"
-                            name="imagen"
-                            accept="image/*"
-                            onChange={handleImagenChange}
-                            required
-                        />
+                        <input type="file" id="imagen" name="imagen" accept="image/*" onChange={handleImagenChange}/>
 
                         <div className="div pt-4">
                             <input type="submit" value="Subir Imagen" />
@@ -140,22 +197,16 @@ const ImgCarrusel = () => {
             <div className="py-5">
                 <div className="login-container">
                     <h2 className="pb-3">Borrar Imagen</h2>
-                    <form action="#" method="post" onSubmit={handleBorrarImagenSubmit}>
+                    <form onSubmit={handleBorrarImagenSubmit}>
                         <label htmlFor="selectImagen">Selecciona la imagen:</label>
-                        <select
-                            name="selectImagen"
-                            id="selectImagen"
-                            value={imagenSeleccionada}
-                            onChange={handleImagenSeleccionadaChange}
-                        >
-                            <option value="">Selecciona una imagen</option>
+                        <select name="selectImagen" id="selectImagen" value={imagenSeleccionada} onChange={handleImagenSeleccionadaChange}>
+                            <option value="" disabled hidden>Selecciona una imagen</option>
                             {imagenes.map((imagen) => (
                                 <option key={imagen.id} value={imagen.id}>
                                     {imagen.nombre}
                                 </option>
                             ))}
                         </select>
-
                         <div className="div pt-4">
                             <input type="submit" value="Borrar Imagen" />
                         </div>

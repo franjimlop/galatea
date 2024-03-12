@@ -6,7 +6,7 @@ const Galatea = () => {
         <div className="fondo py-3">
             <div className="container text-center">
                 <h1 className="titulo-galatea mt-5">Galatea: La Ninfa Marina</h1>
-                <div className="row mt-5 align-items-center">
+                <div className="row mt-5 align-items-center"> 
                     <div className="col-md-6 px-5 margen-galatea">
                         <p className="text-center pregunta-galatea mb-4">¿Quién es?</p>
                         <p className="texto-galatea text-start">Galatea era una de las cincuenta Nereidas, hijas de Nereo, el anciano dios

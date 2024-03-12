@@ -1,9 +1,5 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Carousel from './components/carousel/carousel';
-import Novedades from './components/novedades/novedades';
-import BotonTodasNoticias from './components/novedades/botonTodasNoticias';
-import HeaderLogin from './components/header/headerLogin';
 
 // Importa los componentes de las páginas
 import Usuario from './pages/usuario';
@@ -42,12 +38,16 @@ import ActividadesExtraescolares from './pages/extraescolares';
 import Actividades from './pages/actividades';
 import Contacto from './pages/contacto';
 import Login from './pages/login';
+import Carousel from './components/carousel/carousel';
+import Novedades from './components/novedades/novedades';
+import BotonTodasNoticias from './components/novedades/botonTodasNoticias';
+import ActividadesTodas from './components/novedades/actividadesTodas';
 
 const RoutesComponent = () => {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/home" />} />
-      <Route path="/home" element={<><Carousel /><Novedades /><BotonTodasNoticias /></>} />
+      <Route path="/home" element={<><Carousel /><Novedades /><BotonTodasNoticias /><ActividadesTodas/></>} />
       <Route path="/imagenes-carrusel" element={<ImagenesCarrusel/>} />
       <Route path="/usuario" element={<Usuario/>} />
       <Route path="/nuestro-centro" element={<Centro />} />

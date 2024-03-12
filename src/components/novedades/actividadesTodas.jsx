@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Novedades = () => {
+const ActividadesTodas = () => {
     const [noticias, setNoticias] = useState([]);
 
     useEffect(() => {
@@ -23,11 +23,11 @@ const Novedades = () => {
     return (
         <div className="fondo">
             <div className="container text-center">
-                <h2 className="py-5 color-titulo">Noticias</h2>
+                <h2 className="py-5 color-titulo">Actividades</h2>
                 <div className="row pb-3">
                     {/* 4 cards en una línea, por debajo de lg de 2 en 2 */}
                     {noticias
-                        .filter(noticia => noticia.categoria !== 'extraescolar' && noticia.categoria !== 'complementaria') // Excluir noticias extraescolares y complementarias
+                        .filter(noticia => noticia.categoria === 'extraescolar' || noticia.categoria === 'complementaria') // Filtrar por categoría
                         .sort((a, b) => b.id - a.id) // Ordenar las noticias por ID de forma descendente
                         .slice(0, 8) // Tomar solo las primeras 8 noticias
                         .map((noticia) => (
@@ -51,4 +51,4 @@ const Novedades = () => {
     );
 };
 
-export default Novedades;
+export default ActividadesTodas;

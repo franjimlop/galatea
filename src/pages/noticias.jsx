@@ -1,13 +1,11 @@
 import React from 'react';
 import '../styles/noticias.css';
-import Novedades from '../components/novedades/novedades';
-import Paginacion from '../components/novedades/paginacion';
+import NoticiasTodas from '../components/novedades/noticiasTodas';
 
 const Noticias = () => {
     return (
         <div>
-        <Novedades/>
-        <Paginacion/>
+        <NoticiasTodas/>
         </div>
     );
 };

@@ -38,7 +38,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="text-center p-4" style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
-                <p>© 2023 Copyright: <span className="fw-bold">IES La Galatea</span></p>
+                <p>© {new Date().getFullYear()} Copyright: <span className="fw-bold">IES La Galatea</span></p>
             </div>
         </footer>
     );

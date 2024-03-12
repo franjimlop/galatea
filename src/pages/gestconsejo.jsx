@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/login.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const GestionConsejo = () => {
     const [nombre, setNombre] = useState('');
@@ -7,30 +9,46 @@ const GestionConsejo = () => {
     const [miembrosConsejo, setMiembrosConsejo] = useState([]);
     const [miembroSeleccionado, setMiembroSeleccionado] = useState('');
 
-    useEffect(() => {
-        const obtenerMiembros = async () => {
-            try {
-                const response = await fetch('http://localhost:5000/consejo');
-                if (response.ok) {
-                    const data = await response.json();
-                    setMiembrosConsejo(data);
-                } else {
-                    console.error('Error al obtener la lista de miembros');
-                }
-            } catch (error) {
-                console.error('Error al obtener la lista de miembros:', error);
-            }
-        };
+    const [nombreError, setNombreError] = useState('');
+    const [origenError, setOrigenError] = useState('');
 
+    const obtenerMiembros = async () => {
+        try {
+            const response = await fetch('http://localhost:5000/consejo');
+            if (response.ok) {
+                const data = await response.json();
+                setMiembrosConsejo(data);
+            } else {
+                console.error('Error al obtener la lista de miembros');
+            }
+        } catch (error) {
+            console.error('Error al obtener la lista de miembros:', error);
+        }
+    };
+    useEffect(() => {
         obtenerMiembros();
     }, []);
 
     const handleNombreChange = (e) => {
-        setNombre(e.target.value);
+        const value = e.target.value;
+        setNombre(value);
+
+        if (value.length < 4) {
+            setNombreError('El nombre debe tener al menos 4 caracteres');
+        } else {
+            setNombreError('');
+        }
     };
 
     const handleOrigenChange = (e) => {
-        setOrigen(e.target.value);
+        const value = e.target.value;
+        setOrigen(value);
+
+        if (value.length < 4) {
+            setOrigenError('El origen debe tener al menos 4 caracteres');
+        } else {
+            setOrigenError('');
+        }
     };
 
     const handleMiembroSeleccionadoChange = (e) => {
@@ -40,8 +58,17 @@ const GestionConsejo = () => {
     const handleCrearMiembroSubmit = async (e) => {
         e.preventDefault();
 
-        if (!nombre || !origen) {
-            alert('Por favor, completa todos los campos');
+        if (!nombre || !origen || nombre.length < 4 || origen.length < 4) {
+            toast.info('Por favor, completa todos los campos', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
             return;
         }
 
@@ -56,12 +83,30 @@ const GestionConsejo = () => {
             });
 
             if (response.ok) {
-                alert('Miembro creado exitosamente');
                 setNombre('');
                 setOrigen('');
-                window.location.reload();
+                toast.success('Miembro creado exitosamente', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                obtenerMiembros();
             } else {
-                alert('Error al crear miembro');
+                toast.error('Error al crear miembro', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
             }
         } catch (error) {
             console.error('Error al enviar datos al backend:', error);
@@ -72,7 +117,16 @@ const GestionConsejo = () => {
         e.preventDefault();
 
         if (!miembroSeleccionado) {
-            alert('Por favor, selecciona un miembro para borrar');
+            toast.info('Por favor, selecciona un miembro para borrar', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+            });
             return;
         }
 
@@ -82,42 +136,49 @@ const GestionConsejo = () => {
             });
 
             if (response.ok) {
-                alert('IMiembro borrado exitosamente');
-                window.location.reload();
+                toast.success('Miembro borrado exitosamente', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
+                obtenerMiembros();
             } else {
-                const data = await response.json();
-                alert(`Error al borrar miembro: ${data.error}`);
+                toast.error('Error al borrar el miembro', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "colored",
+                });
             }
         } catch (error) {
             console.error('Error al enviar solicitud de borrado al backend:', error);
-            alert('Error al conectar con el servidor');
         }
     };
 
     return (
         <div>
+            <ToastContainer />
             <div className="py-5">
                 <div className="login-container">
                     <h2 className="pb-3">Crear Miembro del Consejo</h2>
-                    <form action="#" method="post" onSubmit={handleCrearMiembroSubmit}>
+                    <form encType="multipart/form-data" onSubmit={handleCrearMiembroSubmit}>
                         <label htmlFor="nombre">Nombre del miembro:</label>
-                        <input
-                            type="text"
-                            id="nombre"
-                            name="nombre"
-                            value={nombre}
-                            onChange={handleNombreChange}
-                            required
-                        />
+                        <input type="text" id="nombre" name="nombre" value={nombre} onChange={handleNombreChange}/>
+                        {nombreError && <p className="error-message red">{nombreError}</p>}
+                        
                         <label htmlFor="origen">Origen del miembro (Profesor, AMPA...):</label>
-                        <input
-                            type="text"
-                            id="origen"
-                            name="origen"
-                            value={origen}
-                            onChange={handleOrigenChange}
-                            required
-                        />
+                        <input type="text" id="origen" name="origen" value={origen} onChange={handleOrigenChange}/>
+                        {origenError && <p className="error-message red">{origenError}</p>}
+                        
                         <div className="div pt-4">
                             <input type="submit" value="Crear Miembro" />
                         </div>
@@ -127,16 +188,10 @@ const GestionConsejo = () => {
             <div className="py-5">
                 <div className="login-container">
                     <h2 className="pb-3">Borrar Miembro del Consejo</h2>
-                    <form action="#" method="post" onSubmit={handleBorrarMiembroSubmit}>
+                    <form onSubmit={handleBorrarMiembroSubmit}>
                         <label htmlFor="miembro">Seleccionar miembro:</label>
-                        <select
-                            name="miembro"
-                            id="miembro"
-                            value={miembroSeleccionado}
-                            onChange={handleMiembroSeleccionadoChange}
-                        >
-                            <option value="">Selecciona un miembro</option>
-                            {/* Mapear los miembros del Consejo desde el estado local */}
+                        <select name="miembro" id="miembro" value={miembroSeleccionado} onChange={handleMiembroSeleccionadoChange}>
+                            <option value="" disabled hidden>Selecciona un miembro</option>
                             {miembrosConsejo.map(miembro => (
                                 <option key={miembro.id} value={miembro.id}>
                                     {miembro.nombre}

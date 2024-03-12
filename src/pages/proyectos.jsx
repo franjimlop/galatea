@@ -1,66 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Proyectos = () => {
+    const [proyectos, setProyectos] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/proyectos')
+            .then(response => response.json())
+            .then(data => setProyectos(data))
+            .catch(error => console.error('Error al obtener proyectos:', error));
+    }, []);
+
     return (
         <div className="fondo">
             <div className="container pb-3">
-                <h1 className="text-center mb-0 py-5">Proyecto Mejor Clase</h1>
-                <p className="texto-consejo fs-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacus non libero blandit, sit amet
-                    luctus justo ultrices. Integer sollicitudin, velit a dictum ultrices, ex sapien fermentum elit, a egestas
-                    erat turpis ac dui. Sed vel augue eget nunc viverra volutpat. Praesent at bibendum erat. Maecenas id bibendum
-                    velit, id ullamcorper quam. Sed nec dignissim odio. Nulla facilisi. Vivamus tincidunt nunc ut bibendum
-                    suscipit. Suspendisse posuere, dolor in consequat sollicitudin, sapien nunc vehicula tellus, ut viverra dui
-                    orci sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacus non libero
-                    blandit, sit amet luctus justo ultrices. Integer sollicitudin, velit a dictum ultrices, ex sapien fermentum
-                    elit, a egestas erat turpis ac dui. Sed vel augue eget nunc viverra volutpat. Praesent at bibendum erat.
-                    Maecenas id bibendum velit, id ullamcorper quam. Sed nec dignissim odio. Nulla facilisi. Vivamus tincidunt
-                    nunc ut bibendum suscipit. Suspendisse posuere, dolor in consequat sollicitudin, sapien nunc vehicula tellus,
-                    ut viverra dui orci sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum
-                    lacus non libero blandit, sit amet luctus justo ultrices. Integer sollicitudin, velit a dictum ultrices, ex
-                    sapien fermentum elit, a egestas erat turpis ac dui. Sed vel augue eget nunc viverra volutpat. Praesent at
-                    bibendum erat. Maecenas id bibendum velit, id ullamcorper quam. Sed nec dignissim odio. Nulla facilisi.
-                    Vivamus tincidunt nunc ut bibendum suscipit. Suspendisse posuere, dolor in consequat sollicitudin, sapien nunc
-                    vehicula tellus, ut viverra dui orci sit amet dui.
-                </p>
-                <h1 className="text-center mb-0 py-5">Titula-S</h1>
-                <p className="texto-consejo fs-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacus non libero blandit, sit amet
-                    luctus justo ultrices. Integer sollicitudin, velit a dictum ultrices, ex sapien fermentum elit, a egestas
-                    erat turpis ac dui. Sed vel augue eget nunc viverra volutpat. Praesent at bibendum erat. Maecenas id bibendum
-                    velit, id ullamcorper quam. Sed nec dignissim odio. Nulla facilisi. Vivamus tincidunt nunc ut bibendum
-                    suscipit. Suspendisse posuere, dolor in consequat sollicitudin, sapien nunc vehicula tellus, ut viverra dui
-                    orci sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacus non libero
-                    blandit, sit amet luctus justo ultrices. Integer sollicitudin, velit a dictum ultrices, ex sapien fermentum
-                    elit, a egestas erat turpis ac dui. Sed vel augue eget nunc viverra volutpat. Praesent at bibendum erat.
-                    Maecenas id bibendum velit, id ullamcorper quam. Sed nec dignissim odio. Nulla facilisi. Vivamus tincidunt
-                    nunc ut bibendum suscipit. Suspendisse posuere, dolor in consequat sollicitudin, sapien nunc vehicula tellus,
-                    ut viverra dui orci sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum
-                    lacus non libero blandit, sit amet luctus justo ultrices. Integer sollicitudin, velit a dictum ultrices, ex
-                    sapien fermentum elit, a egestas erat turpis ac dui. Sed vel augue eget nunc viverra volutpat. Praesent at
-                    bibendum erat. Maecenas id bibendum velit, id ullamcorper quam. Sed nec dignissim odio. Nulla facilisi.
-                    Vivamus tincidunt nunc ut bibendum suscipit. Suspendisse posuere, dolor in consequat sollicitudin, sapien nunc
-                    vehicula tellus, ut viverra dui orci sit amet dui.
-                </p>
-                <h1 className="text-center mb-0 py-5">PROA+</h1>
-                <p className="texto-consejo fs-5">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacus non libero blandit, sit amet
-                    luctus justo ultrices. Integer sollicitudin, velit a dictum ultrices, ex sapien fermentum elit, a egestas
-                    erat turpis ac dui. Sed vel augue eget nunc viverra volutpat. Praesent at bibendum erat. Maecenas id bibendum
-                    velit, id ullamcorper quam. Sed nec dignissim odio. Nulla facilisi. Vivamus tincidunt nunc ut bibendum
-                    suscipit. Suspendisse posuere, dolor in consequat sollicitudin, sapien nunc vehicula tellus, ut viverra dui
-                    orci sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacus non libero
-                    blandit, sit amet luctus justo ultrices. Integer sollicitudin, velit a dictum ultrices, ex sapien fermentum
-                    elit, a egestas erat turpis ac dui. Sed vel augue eget nunc viverra volutpat. Praesent at bibendum erat.
-                    Maecenas id bibendum velit, id ullamcorper quam. Sed nec dignissim odio. Nulla facilisi. Vivamus tincidunt
-                    nunc ut bibendum suscipit. Suspendisse posuere, dolor in consequat sollicitudin, sapien nunc vehicula tellus,
-                    ut viverra dui orci sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum
-                    lacus non libero blandit, sit amet luctus justo ultrices. Integer sollicitudin, velit a dictum ultrices, ex
-                    sapien fermentum elit, a egestas erat turpis ac dui. Sed vel augue eget nunc viverra volutpat. Praesent at
-                    bibendum erat. Maecenas id bibendum velit, id ullamcorper quam. Sed nec dignissim odio. Nulla facilisi.
-                    Vivamus tincidunt nunc ut bibendum suscipit. Suspendisse posuere, dolor in consequat sollicitudin, sapien nunc
-                    vehicula tellus, ut viverra dui orci sit amet dui.
-                </p>
+                {proyectos.map((proyecto) => (
+                    <div key={proyecto.id}>
+                        <h1 className="text-center mb-0 py-5">{proyecto.titulo}</h1>
+                        <p className="texto-consejo fs-5">{proyecto.texto}</p>
+                    </div>
+                ))}
             </div>
         </div>
     );

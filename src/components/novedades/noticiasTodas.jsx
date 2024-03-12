@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Novedades = () => {
+const NoticiasTodas = () => {
     const [noticias, setNoticias] = useState([]);
 
     useEffect(() => {
@@ -27,13 +27,12 @@ const Novedades = () => {
                 <div className="row pb-3">
                     {/* 4 cards en una línea, por debajo de lg de 2 en 2 */}
                     {noticias
-                        .filter(noticia => noticia.categoria !== 'extraescolar' && noticia.categoria !== 'complementaria') // Excluir noticias extraescolares y complementarias
+                        .filter(noticia => !(noticia.categoria === 'extraescolar' || noticia.categoria === 'complementaria')) // Filtrar por categoría
                         .sort((a, b) => b.id - a.id) // Ordenar las noticias por ID de forma descendente
-                        .slice(0, 8) // Tomar solo las primeras 8 noticias
                         .map((noticia) => (
-                            <div className="col-xl-3 col-md-6 py-3" key={noticia.id}>
+                            <div className="col-xl-3 col-md-6 py-3">
                                 <div className="card h-100">
-                                    <img className="card-img-top custom-image" src={`data:image;base64,${noticia.foto}`} alt="Imagen de noticia" />
+                                    <img className="card-img-top custom-image" src={`data:image;base64,${noticia.foto}`} />
                                     <div className="card-body">
                                         <h5 className="card-title custom-card-title">{noticia.nombre}</h5>
                                         <p className="card-text pt-0 pt-md-3">{noticia.texto}</p>
@@ -51,4 +50,4 @@ const Novedades = () => {
     );
 };
 
-export default Novedades;
+export default NoticiasTodas;

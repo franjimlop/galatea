@@ -1,13 +1,11 @@
 import React from 'react';
 import '../styles/noticias.css';
-import ComplementariasComponent from '../components/novedades/complementarias';
-import Paginacion from '../components/novedades/paginacion';
+import ComplementariasComponente from '../components/novedades/complementarias';
 
 const Complementarias = () => {
     return (
-        <div>
-        <ComplementariasComponent/>
-        <Paginacion/>
+        <div className="App fondo">
+            <ComplementariasComponente />
         </div>
     );
 };

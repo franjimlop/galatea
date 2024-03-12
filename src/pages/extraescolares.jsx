@@ -1,13 +1,11 @@
 import React from 'react';
 import '../styles/noticias.css';
-import ExtraescolaresComponent from '../components/novedades/extraescolares';
-import Paginacion from '../components/novedades/paginacion';
+import ExtraescolaresComponente from '../components/novedades/extraescolares';
 
 const Extraescolares = () => {
     return (
-        <div>
-        <ExtraescolaresComponent/>
-        <Paginacion/>
+        <div className="App fondo">
+            <ExtraescolaresComponente />
         </div>
     );
 };

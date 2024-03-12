@@ -8,7 +8,7 @@ const Contacto = () => {
                 <div className="row pt-5 pb-md-5">
                     <div className="col-md-6">
                         <h1 className="nombre-contacto py-3">Horario</h1>
-                        <table className="texto-horario">
+                        <table className="texto-horario"> 
                             <tbody>
                                 <tr>
                                     <td className="py-2">1ª Hora</td>
