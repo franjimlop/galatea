@@ -3,10 +3,9 @@ const mysql = require('mysql2');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const multer = require('multer');
-const path = require('path');
 
 const app = express();
-const port = 5000; // Puerto para el servidor Node.js
+const port = process.env.SERVER_PORT || 5000; // Usar el puerto definido en la variable de entorno o 5000 por defecto
 
 app.use(cors());
 app.use(express.json());

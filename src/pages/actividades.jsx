@@ -286,6 +286,7 @@ const GestionActividades = () => {
 
     return (
         <div>
+        <ToastContainer />
             <div className="py-5">
                 <div className="login-container">
                     <h2 className="pb-3">Agregar Actividad</h2>
