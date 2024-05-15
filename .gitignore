@@ -1,1 +1,24 @@
-node_modules
+# Archivos de compilación y dependencias
+node_modules/
+build/
+dist/
+*.log
+
+# Archivos de configuración local (si corresponde)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Otros archivos generados automáticamente
+*.pid
+*.pid.lock
