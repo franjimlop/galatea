@@ -7,7 +7,7 @@ const Calendario = () => {
     useEffect(() => {
         const obtenerCalendarios = async () => {
             try {
-                const response = await fetch('https://51.124.190.137:5000/calendarios');
+                const response = await fetch('https://localhost:5000/calendarios');
                 if (response.ok) {
                     const data = await response.json();
                     setCalendarios(data);

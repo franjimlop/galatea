@@ -5,7 +5,7 @@ const Licencias = () => {
     const [licencias, setLicencias] = useState([]);
 
     useEffect(() => {
-        fetch('https://51.124.190.137:5000/licencias')
+        fetch('https://localhost:5000/licencias')
             .then(response => response.json())
             .then(data => setLicencias(data))
             .catch(error => console.error('Error al obtener licencias:', error));

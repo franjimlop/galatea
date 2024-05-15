@@ -7,7 +7,7 @@ const Carousel = () => {
     useEffect(() => {
         const obtenerImagenes = async () => {
             try {
-                const response = await fetch('https://51.124.190.137:5000/imagenes');
+                const response = await fetch('https://localhost:5000/imagenes');
                 if (response.ok) {
                     const data = await response.json();
                     setImagenes(data);

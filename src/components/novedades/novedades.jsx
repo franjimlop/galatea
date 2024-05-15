@@ -7,7 +7,7 @@ const Novedades = () => {
     useEffect(() => {
         const obtenerNoticias = async () => {
             try {
-                const response = await fetch('https://51.124.190.137:5000/noticias');
+                const response = await fetch('https://localhost:5000/noticias');
                 if (response.ok) {
                     const data = await response.json();
                     setNoticias(data);

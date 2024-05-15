@@ -5,7 +5,7 @@ const Becas = () => {
     const [becas, setBecas] = useState([]);
 
     useEffect(() => {
-        fetch('https://51.124.190.137:5000/becas')
+        fetch('https://localhost:5000/becas')
             .then(response => response.json())
             .then(data => setBecas(data))
             .catch(error => console.error('Error al obtener becas:', error));

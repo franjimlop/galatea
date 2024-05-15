@@ -4,7 +4,7 @@ const Proyectos = () => {
     const [proyectos, setProyectos] = useState([]);
 
     useEffect(() => {
-        fetch('https://51.124.190.137:5000/proyectos')
+        fetch('https://localhost:5000/proyectos')
             .then(response => response.json())
             .then(data => setProyectos(data))
             .catch(error => console.error('Error al obtener proyectos:', error));

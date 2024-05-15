@@ -13,7 +13,7 @@ const Instalaciones = () => {
 
     const obtenerInstalaciones = async () => {
         try {
-            const response = await fetch('https://51.124.190.137:5000/instalaciones');
+            const response = await fetch('https://localhost:5000/instalaciones');
             if (response.ok) {
                 const data = await response.json();
                 setInstalaciones(data);
@@ -87,7 +87,7 @@ const Instalaciones = () => {
             formData.append('nombre', nombre);
             formData.append('imagen', imagen);
 
-            const response = await fetch('https://51.124.190.137:5000/instalaciones', {
+            const response = await fetch('https://localhost:5000/instalaciones', {
                 method: 'POST',
                 body: formData,
             });
@@ -141,7 +141,7 @@ const Instalaciones = () => {
         }
 
         try {
-            const response = await fetch(`https://51.124.190.137:5000/instalaciones/${instalacionSeleccionada}`, {
+            const response = await fetch(`https://localhost:5000/instalaciones/${instalacionSeleccionada}`, {
                 method: 'DELETE',
             });
 

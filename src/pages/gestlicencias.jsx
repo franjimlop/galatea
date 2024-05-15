@@ -12,7 +12,7 @@ const GestionLicencias = () => {
 
     const obtenerLicencias = async () => {
         try {
-            const response = await fetch('https://51.124.190.137:5000/licencias');
+            const response = await fetch('https://localhost:5000/licencias');
             if (response.ok) {
                 const data = await response.json();
                 setLicencias(data);
@@ -63,7 +63,7 @@ const GestionLicencias = () => {
         formData.append('texto', texto);
 
         try {
-            const response = await fetch('https://51.124.190.137:5000/licencias', {
+            const response = await fetch('https://localhost:5000/licencias', {
                 method: 'POST',
                 body: formData,
             });
@@ -116,7 +116,7 @@ const GestionLicencias = () => {
         }
 
         try {
-            const response = await fetch(`https://51.124.190.137:5000/licencias/${licenciaSeleccionada}`, {
+            const response = await fetch(`https://localhost:5000/licencias/${licenciaSeleccionada}`, {
                 method: 'DELETE',
             });
 

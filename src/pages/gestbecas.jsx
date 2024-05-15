@@ -14,7 +14,7 @@ const GestionBecas = () => {
 
     const obtenerBecas = async () => {
         try {
-            const response = await fetch('https://51.124.190.137:5000/becas');
+            const response = await fetch('https://localhost:5000/becas');
             if (response.ok) {
                 const data = await response.json();
                 setBecas(data);
@@ -77,7 +77,7 @@ const GestionBecas = () => {
         formData.append('enlace', enlace);
 
         try {
-            const response = await fetch('https://51.124.190.137:5000/becas', {
+            const response = await fetch('https://localhost:5000/becas', {
                 method: 'POST',
                 body: formData,
             });
@@ -131,7 +131,7 @@ const GestionBecas = () => {
         }
 
         try {
-            const response = await fetch(`https://51.124.190.137:5000/becas/${becaSeleccionada}`, {
+            const response = await fetch(`https://localhost:5000/becas/${becaSeleccionada}`, {
                 method: 'DELETE',
             });
 
