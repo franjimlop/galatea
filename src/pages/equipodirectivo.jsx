@@ -15,7 +15,7 @@ const EquipoDirectivo = () => {
 
     const obtenerMiembros = async () => {
         try {
-            const response = await fetch('http://localhost:5000/equipodirectivo');
+            const response = await fetch('https://51.124.190.137:5000/equipodirectivo');
             if (response.ok) {
                 const data = await response.json();
                 setMiembros(data);
@@ -101,7 +101,7 @@ const EquipoDirectivo = () => {
             formData.append('puesto', puesto);
             formData.append('imagen', imagen);
 
-            const response = await fetch('http://localhost:5000/equipodirectivo', {
+            const response = await fetch('https://51.124.190.137:5000/equipodirectivo', {
                 method: 'POST',
                 body: formData,
             });
@@ -156,7 +156,7 @@ const EquipoDirectivo = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/equipodirectivo/${miembroSeleccionado}`, {
+            const response = await fetch(`https://51.124.190.137:5000/equipodirectivo/${miembroSeleccionado}`, {
                 method: 'DELETE',
             });
 

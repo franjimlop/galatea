@@ -8,7 +8,7 @@ const Centro = () => {
     useEffect(() => {
         const obtenerEquipoDirectivo = async () => {
             try {
-                const response = await fetch('http://localhost:5000/equipodirectivo');
+                const response = await fetch('https://51.124.190.137:5000/equipodirectivo');
                 if (response.ok) {
                     const data = await response.json();
                     setEquipoDirectivo(data);
@@ -22,7 +22,7 @@ const Centro = () => {
 
         const obtenerInstalaciones = async () => {
             try {
-                const response = await fetch('http://localhost:5000/instalaciones');
+                const response = await fetch('https://51.124.190.137:5000/instalaciones');
                 if (response.ok) {
                     const data = await response.json();
                     setInstalaciones(data);

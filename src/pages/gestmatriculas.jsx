@@ -12,7 +12,7 @@ const GestionMatriculas = () => {
 
     const obtenerMatriculas = async () => {
         try {
-            const response = await fetch('http://localhost:5000/matriculas');
+            const response = await fetch('https://51.124.190.137:5000/matriculas');
             if (response.ok) {
                 const data = await response.json();
                 setMatriculas(data);
@@ -63,7 +63,7 @@ const GestionMatriculas = () => {
         formData.append('texto', texto);
 
         try {
-            const response = await fetch('http://localhost:5000/matriculas', {
+            const response = await fetch('https://51.124.190.137:5000/matriculas', {
                 method: 'POST',
                 body: formData,
             });
@@ -116,7 +116,7 @@ const GestionMatriculas = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/matriculas/${matriculaSeleccionada}`, {
+            const response = await fetch(`https://51.124.190.137:5000/matriculas/${matriculaSeleccionada}`, {
                 method: 'DELETE',
             });
 

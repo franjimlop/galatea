@@ -18,7 +18,7 @@ const GestionActividades = () => {
 
     const obtenerNoticias = async () => {
         try {
-            const response = await fetch('http://localhost:5000/noticias');
+            const response = await fetch('https://51.124.190.137:5000/noticias');
             if (response.ok) {
                 const data = await response.json();
                 setNoticias(data);
@@ -111,7 +111,7 @@ const GestionActividades = () => {
             formData.append('foto', foto);
             formData.append('fecha', fecha);
 
-            const response = await fetch('http://localhost:5000/noticias', {
+            const response = await fetch('https://51.124.190.137:5000/noticias', {
                 method: 'POST',
                 body: formData,
             });
@@ -198,7 +198,7 @@ const GestionActividades = () => {
                 formData.append('archivos', archivo);
             }); 
 
-            const response = await fetch('http://localhost:5000/adjuntos', {
+            const response = await fetch('https://51.124.190.137:5000/adjuntos', {
                 method: 'POST',
                 body: formData,
             });
@@ -251,7 +251,7 @@ const GestionActividades = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/noticias/${noticiaSeleccionada}`, {
+            const response = await fetch(`https://51.124.190.137:5000/noticias/${noticiaSeleccionada}`, {
                 method: 'DELETE',
             });
 

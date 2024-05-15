@@ -15,7 +15,7 @@ const EnlacesDepartamentos = () => {
 
     const obtenerEnlaces = async () => {
         try {
-            const response = await fetch('http://localhost:5000/enlaces');
+            const response = await fetch('https://51.124.190.137:5000/enlaces');
             if (response.ok) {
                 const data = await response.json();
                 setEnlaces(data);
@@ -81,7 +81,7 @@ const EnlacesDepartamentos = () => {
         formData.append('enlace', enlace);
 
         try {
-            const response = await fetch('http://localhost:5000/enlaces', {
+            const response = await fetch('https://51.124.190.137:5000/enlaces', {
                 method: 'POST',
                 body: formData,
             });
@@ -136,7 +136,7 @@ const EnlacesDepartamentos = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/enlaces/${enlaceSeleccionado}`, {
+            const response = await fetch(`https://51.124.190.137:5000/enlaces/${enlaceSeleccionado}`, {
                 method: 'DELETE',
             });
 

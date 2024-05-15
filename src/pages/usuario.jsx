@@ -17,7 +17,7 @@ const Usuario = () => {
 
     const obtenerUsuarios = async () => {
         try {
-            const response = await fetch('http://localhost:5000/usuarios');
+            const response = await fetch('https://51.124.190.137:5000/usuarios');
             if (response.ok) {
                 const data = await response.json();
                 setUsuarios(data);
@@ -98,7 +98,7 @@ const Usuario = () => {
             // Cifra la contraseña antes de enviarla al backend
             const hashedPassword = await bcrypt.hash(contrasena, 10);
 
-            const response = await fetch('http://localhost:5000/usuarios', {
+            const response = await fetch('https://51.124.190.137:5000/usuarios', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -160,7 +160,7 @@ const Usuario = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/usuarios/${usuarioSeleccionado}`, {
+            const response = await fetch(`https://51.124.190.137:5000/usuarios/${usuarioSeleccionado}`, {
                 method: 'DELETE',
             });
 

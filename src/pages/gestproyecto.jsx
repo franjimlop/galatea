@@ -14,7 +14,7 @@ const GestionProyectos = () => {
 
     const obtenerProyectos = async () => {
         try {
-            const response = await fetch('http://localhost:5000/proyectos');
+            const response = await fetch('https://51.124.190.137:5000/proyectos');
             if (response.ok) {
                 const data = await response.json();
                 setProyectos(data);
@@ -77,7 +77,7 @@ const GestionProyectos = () => {
         formData.append('texto', texto);
 
         try {
-            const response = await fetch('http://localhost:5000/proyectos', {
+            const response = await fetch('https://51.124.190.137:5000/proyectos', {
                 method: 'POST',
                 body: formData,
             });
@@ -131,7 +131,7 @@ const GestionProyectos = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/proyectos/${proyectoSeleccionado}`, {
+            const response = await fetch(`https://51.124.190.137:5000/proyectos/${proyectoSeleccionado}`, {
                 method: 'DELETE',
             });
 

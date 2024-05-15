@@ -6,7 +6,7 @@ const Documentos = () => {
 
     useEffect(() => {
         // Obtener los documentos desde el backend
-        fetch('http://localhost:5000/documentos')
+        fetch('https://51.124.190.137:5000/documentos')
             .then(response => response.json())
             .then(data => setDocumentos(data))
             .catch(error => console.error('Error al obtener documentos:', error));

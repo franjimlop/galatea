@@ -13,7 +13,7 @@ const ImgCarrusel = () => {
 
     const obtenerImagenes = async () => {
         try {
-            const response = await fetch('http://localhost:5000/imagenes');
+            const response = await fetch('https://51.124.190.137:5000/imagenes');
             if (response.ok) {
                 const data = await response.json();
                 setImagenes(data);
@@ -87,7 +87,7 @@ const ImgCarrusel = () => {
             formData.append('nombre', nombreImagen);
             formData.append('imagen', imagen);
 
-            const response = await fetch('http://localhost:5000/imagenes', {
+            const response = await fetch('https://51.124.190.137:5000/imagenes', {
                 method: 'POST',
                 body: formData,
             });
@@ -141,7 +141,7 @@ const ImgCarrusel = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/imagenes/${imagenSeleccionada}`, {
+            const response = await fetch(`https://51.124.190.137:5000/imagenes/${imagenSeleccionada}`, {
                 method: 'DELETE',
             });
 

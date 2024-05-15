@@ -16,11 +16,11 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 const connection = mysql.createConnection({
-  host: 'localhost',
+  host: '51.124.190.137',
   user: 'root',
-  password: '',
+  password: 'LaGalatea2024',
   database: 'bdgalatea',
-  port: 3306, // Puerto por defecto de MySQL
+  port: 5000,
 });
 
 connection.connect((err) => {
@@ -740,5 +740,5 @@ app.post('/adjuntos', upload.array('archivos'), (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Servidor iniciado en http://localhost:${port}`);
+  console.log(`Servidor iniciado en https://51.124.190.137:${port}`);
 });

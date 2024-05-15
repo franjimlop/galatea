@@ -7,7 +7,7 @@ const CientificoMatematico = () => {
     const [enlaces, setEnlaces] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/enlaces')
+        fetch('https://51.124.190.137:5000/enlaces')
             .then(response => response.json())
             .then(data => setEnlaces(data))
             .catch(error => console.error('Error al obtener enlaces:', error));

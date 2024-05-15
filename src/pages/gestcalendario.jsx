@@ -13,7 +13,7 @@ const GestionCalendarios = () => {
 
     const obtenerCalendarios = async () => {
         try {
-            const response = await fetch('http://localhost:5000/calendarios');
+            const response = await fetch('https://51.124.190.137:5000/calendarios');
             if (response.ok) {
                 const data = await response.json();
                 setCalendarios(data);
@@ -87,7 +87,7 @@ const GestionCalendarios = () => {
             formData.append('nombre', nombre);
             formData.append('foto', foto);
 
-            const response = await fetch('http://localhost:5000/calendarios', {
+            const response = await fetch('https://51.124.190.137:5000/calendarios', {
                 method: 'POST',
                 body: formData,
             });
@@ -141,7 +141,7 @@ const GestionCalendarios = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/calendarios/${calendarioSeleccionado}`, {
+            const response = await fetch(`https://51.124.190.137:5000/calendarios/${calendarioSeleccionado}`, {
                 method: 'DELETE',
             });
 

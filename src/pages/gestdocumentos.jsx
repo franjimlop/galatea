@@ -13,7 +13,7 @@ const GestionDocumentos = () => {
 
     const obtenerDocumentos = async () => {
         try {
-            const response = await fetch('http://localhost:5000/documentos');
+            const response = await fetch('https://51.124.190.137:5000/documentos');
             if (response.ok) {
                 const data = await response.json();
                 setDocumentos(data);
@@ -87,7 +87,7 @@ const GestionDocumentos = () => {
         formData.append('archivo', archivo);
 
         try {
-            const response = await fetch('http://localhost:5000/documentos', {
+            const response = await fetch('https://51.124.190.137:5000/documentos', {
                 method: 'POST',
                 body: formData,
             });
@@ -141,7 +141,7 @@ const GestionDocumentos = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/documentos/${documentoSeleccionado}`, {
+            const response = await fetch(`https://51.124.190.137:5000/documentos/${documentoSeleccionado}`, {
                 method: 'DELETE',
             });
 

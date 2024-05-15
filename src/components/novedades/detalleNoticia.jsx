@@ -6,7 +6,7 @@ const DetalleNoticia = ({ noticia, onClose }) => {
     useEffect(() => {
         const obtenerAdjuntos = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/adjuntos?id_noticia=${noticia.id}`);
+                const response = await fetch(`https://51.124.190.137:5000/adjuntos?id_noticia=${noticia.id}`);
                 if (response.ok) {
                     const data = await response.json();
                     setAdjuntos(data);

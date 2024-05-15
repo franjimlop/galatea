@@ -14,7 +14,7 @@ const GestionConsejo = () => {
 
     const obtenerMiembros = async () => {
         try {
-            const response = await fetch('http://localhost:5000/consejo');
+            const response = await fetch('https://51.124.190.137:5000/consejo');
             if (response.ok) {
                 const data = await response.json();
                 setMiembrosConsejo(data);
@@ -77,7 +77,7 @@ const GestionConsejo = () => {
             formData.append('nombre', nombre);
             formData.append('origen', origen);
 
-            const response = await fetch('http://localhost:5000/consejo', {
+            const response = await fetch('https://51.124.190.137:5000/consejo', {
                 method: 'POST',
                 body: formData,
             });
@@ -131,7 +131,7 @@ const GestionConsejo = () => {
         }
 
         try {
-            const response = await fetch(`http://localhost:5000/consejo/${miembroSeleccionado}`, {
+            const response = await fetch(`https://51.124.190.137:5000/consejo/${miembroSeleccionado}`, {
                 method: 'DELETE',
             });
 

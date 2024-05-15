@@ -17,8 +17,7 @@
     "mysql2": "^3.9.1",
     "react-router-dom": "^6.21.3",
     "react-scripts": "^5.0.1",
-    "react-toastify": "^10.0.4",
-    "sqlite3": "^5.1.7"
+    "react-toastify": "^10.0.4"
   },
   "homepage": "https://franjimlop.github.io/galatea",
   "scripts": {

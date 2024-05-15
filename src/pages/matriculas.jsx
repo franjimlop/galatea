@@ -5,7 +5,7 @@ const Matriculas = () => {
     const [matriculas, setMatriculas] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/matriculas')
+        fetch('https://51.124.190.137:5000/matriculas')
             .then(response => response.json())
             .then(data => setMatriculas(data))
             .catch(error => console.error('Error al obtener matriculas:', error));
