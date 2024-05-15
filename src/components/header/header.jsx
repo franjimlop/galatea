@@ -7,7 +7,7 @@ const Header = () => {
             <div className="container">
                 <nav className="navbar navbar-expand-xl navbar-light align-content-center">
                     <div className="container-fluid align-content-center">
-                        <Link to="/home" className="navbar-brand">
+                        <Link to="/" className="navbar-brand">
                             <img src={process.env.PUBLIC_URL + '/images/LA_GALATEA_sin_fondo.png'} className="foto-logo" alt="Logo" />
                         </Link>
                         <button
@@ -24,7 +24,7 @@ const Header = () => {
                         <div className="collapse navbar-collapse letra-menu" id="navbarTogglerDemo02">
                             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                                 <li className="nav-item px-2">
-                                    <Link to="/home" className="nav-link efecto-menu">
+                                    <Link to="/" className="nav-link efecto-menu">
                                         Inicio
                                     </Link>
                                 </li>

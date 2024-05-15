@@ -18,7 +18,7 @@ const Headerlogin = () => {
             <div className="container">
                 <nav className="navbar navbar-expand-xl navbar-light align-content-center">
                     <div className="container-fluid align-content-center">
-                        <Link to="/home" className="navbar-brand">
+                        <Link to="/" className="navbar-brand">
                             <img src={process.env.PUBLIC_URL + '/images/LA_GALATEA_sin_fondo.png'} className="foto-logo" alt="Logo" />
                         </Link>
                         <button
@@ -41,7 +41,7 @@ const Headerlogin = () => {
                                     </a>
                                     <ul className="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                                         <li>
-                                            <Link to="/home" className="dropdown-item">
+                                            <Link to="/" className="dropdown-item">
                                                 Inicio
                                             </Link>
                                         </li>
@@ -269,7 +269,7 @@ const Headerlogin = () => {
                                 <div className="row justify-content-center align-content-center">
                                     <div className="col-auto">
                                         <li className="nav-item px-2" onClick={handleLogout}>
-                                            <Link to="/home" className="nav-link">
+                                            <Link to="/" className="nav-link">
                                                 <i className="fa-solid fa-sign-out"></i>
                                             </Link>
                                         </li>

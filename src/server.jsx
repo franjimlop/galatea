@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const multer = require('multer');
 
 const app = express();
-const port = process.env.SERVER_PORT || 5000; // Usar el puerto definido en la variable de entorno o 5000 por defecto
+const port = 5000; // Puerto para el servidor Node.js
 
 app.use(cors());
 app.use(express.json());
@@ -20,7 +20,7 @@ const connection = mysql.createConnection({
   user: 'root',
   password: 'LaGalatea2024',
   database: 'bdgalatea',
-  port: 5000,
+  port: 3306,
 });
 
 connection.connect((err) => {

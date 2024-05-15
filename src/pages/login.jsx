@@ -42,7 +42,7 @@ const Login = () => {
                     progress: undefined,
                     theme: "colored",
                 });
-                navigate('/home');
+                navigate('/');
                 window.location.reload();
             } else {
                 const errorData = await response.json();
